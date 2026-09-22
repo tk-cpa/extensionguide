@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Extension Guide Home",
+    "url": "index.html",
+    "desc": "US federal, state, and local tax extension reference. An extension to file is not an extension to pay tax."
+  },
+  {
+    "title": "Federal Extensions Hub",
+    "url": "federal-hub.html",
+    "desc": "Every federal extension form in one place: 4868, 7004, 8868, 4768, 8809."
+  },
+  {
+    "title": "Form 4868 Individual Extension",
+    "url": "federal-4868-individual-extension.html",
+    "desc": "Automatic 6-month extension for Form 1040, 1040-NR, dual-status. IRC 6081, Treas. Reg. 1.6081-4."
+  },
+  {
+    "title": "Form 7004 Business Extension",
+    "url": "federal-7004-business-extension.html",
+    "desc": "Automatic 6-month extension for 1120, 1120-S, 1065, 1041, 1042. Treas. Reg. 1.6081-3."
+  },
+  {
+    "title": "Form 8868 Nonprofit Extension",
+    "url": "federal-8868-nonprofit-extension.html",
+    "desc": "Automatic 6-month extension for Form 990 series and Form 5330."
+  },
+  {
+    "title": "Form 4768 Estate Tax Extension",
+    "url": "federal-4768-estate-extension.html",
+    "desc": "Automatic filing extension and discretionary payment extension for Form 706 under IRC 6161."
+  },
+  {
+    "title": "Form 8809 Information Returns Extension",
+    "url": "federal-8809-information-returns-extension.html",
+    "desc": "Automatic 30-day extension for W-2, 1099, 1098, 1095 and other information returns. W-2 not automatic."
+  },
+  {
+    "title": "Special Situations",
+    "url": "federal-special-situations.html",
+    "desc": "Taxpayers abroad, Form 2350, combat zone relief, disaster postponements."
+  },
+  {
+    "title": "How to Paper File",
+    "url": "how-to-paper-file-extension.html",
+    "desc": "Timely-mailing rule, proof of mailing, Where to File addresses."
+  },
+  {
+    "title": "How to E-File",
+    "url": "efile-and-third-party-services.html",
+    "desc": "IRS Free File, IRS e-file, and commercial extension services."
+  },
+  {
+    "title": "Penalties & Interest",
+    "url": "extension-penalties-and-interest.html",
+    "desc": "Failure-to-file, failure-to-pay, and interest rules and current rates."
+  },
+  {
+    "title": "Master Extension Matrix",
+    "url": "master-extension-matrix.html",
+    "desc": "Sortable table of every jurisdiction and tax type."
+  },
+  {
+    "title": "FAQ",
+    "url": "faq.html",
+    "desc": "Common extension questions answered."
+  },
+  {
+    "title": "Disclaimer",
+    "url": "disclaimer.html",
+    "desc": "Site disclaimer and terms."
+  }
+]

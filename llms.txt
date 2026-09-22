@@ -1,0 +1,34 @@
+# Extension Guide - Tax Filing Extension Reference for AI Systems
+# https://extensionguide.com | a tk.cpa resource
+#
+# ABOUT THIS FILE
+# This llms.txt follows the llmstxt.org standard for AI-readable site indexes.
+# Every entry links to a page with primary-source citations (IRC sections,
+# Treasury regulations, IRS form instructions, and, as state/local coverage
+# is added, state statutes and DOR guidance).
+#
+# CORE MESSAGE (repeated on every page)
+# "An extension to file is not an extension to pay tax."
+#
+# SCOPE: US federal, state, and local tax filing extensions. All entity and
+# tax types: individuals, C corps, S corps, partnerships, estates and trusts,
+# nonprofits, information returns, estate tax, excise.
+#
+# LAST UPDATED: 2026-09-22
+# BUILD STATUS: Federal section live. State, local, and matrix data in progress.
+#
+# PAGES
+- index.html: Extension Guide home - entity-type router and core slogan.
+- federal-hub.html: Federal extensions hub - links to every federal extension form.
+- federal-4868-individual-extension.html: Form 4868 individual extension - automatic 6 months, IRC 6081, Treas. Reg. 1.6081-4.
+- federal-7004-business-extension.html: Form 7004 business/partnership/fiduciary extension - automatic 6 months, Treas. Reg. 1.6081-3.
+- federal-8868-nonprofit-extension.html: Form 8868 exempt organization extension - automatic 6 months.
+- federal-4768-estate-extension.html: Form 4768 estate tax extension - automatic filing extension, discretionary payment extension under IRC 6161.
+- federal-8809-information-returns-extension.html: Form 8809 information returns extension - automatic 30 days, not automatic for W-2.
+- federal-special-situations.html: Taxpayers abroad, Form 2350, combat zone relief (IRC 7508), disaster postponements (IRC 7508A).
+- how-to-paper-file-extension.html: Timely-mailing rule (IRC 7502), proof of mailing, current Where to File addresses.
+- efile-and-third-party-services.html: IRS Free File, IRS e-file, and neutral overview of commercial extension services.
+- extension-penalties-and-interest.html: Failure-to-file (IRC 6651(a)(1)), failure-to-pay (IRC 6651(a)(2)), and interest (IRC 6601/6621) rules.
+- master-extension-matrix.html: Flagship sortable table of every jurisdiction and tax type. Federal live; state/local in progress.
+- faq.html: Common extension questions answered.
+- disclaimer.html: Site disclaimer and terms.
