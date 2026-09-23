@@ -210,6 +210,156 @@
     "desc": "Maine automatic with federal extension, equivalent period. 36 M.R.S. sect 5231."
   },
   {
+    "title": "Alaska Tax Extension",
+    "url": "alaska-extension.html",
+    "desc": "No individual income tax; corporate return due 30 days after federal due date. AS 43.20.030."
+  },
+  {
+    "title": "District of Columbia Tax Extension",
+    "url": "district-of-columbia-extension.html",
+    "desc": "Form FR-127 required, not automatic, 6 months, full payment due with request."
+  },
+  {
+    "title": "Maryland Tax Extension",
+    "url": "maryland-extension.html",
+    "desc": "Form 502E required unless no tax owed with federal extension attached. COMAR 03.04.02.14."
+  },
+  {
+    "title": "Minnesota Tax Extension",
+    "url": "minnesota-extension.html",
+    "desc": "Automatic to October 15, no form, 90% payment presumption. Minn. Stat. sect 289A.60."
+  },
+  {
+    "title": "Mississippi Tax Extension",
+    "url": "mississippi-extension.html",
+    "desc": "Automatic with federal extension attached, 6 months. Miss. Code Ann. sect 27-7-50."
+  },
+  {
+    "title": "Missouri Tax Extension",
+    "url": "missouri-extension.html",
+    "desc": "Automatic with federal extension attached, up to 6 months. RSMo sect 143.551."
+  },
+  {
+    "title": "Montana Tax Extension",
+    "url": "montana-extension.html",
+    "desc": "Automatic, no form, 6 months. Mont. Code Ann. sect 15-30-2604."
+  },
+  {
+    "title": "Nebraska Tax Extension",
+    "url": "nebraska-extension.html",
+    "desc": "Federal extension operates automatically, up to 7 months. Neb. Rev. Stat. sect 77-2770."
+  },
+  {
+    "title": "Nevada Tax Extension",
+    "url": "nevada-extension.html",
+    "desc": "No individual or corporate income tax. Nev. Const. art. 10, sect 1."
+  },
+  {
+    "title": "New Hampshire Tax Extension",
+    "url": "new-hampshire-extension.html",
+    "desc": "No individual income tax; Interest and Dividends Tax repealed effective 1-1-2025."
+  },
+  {
+    "title": "New Mexico Tax Extension",
+    "url": "new-mexico-extension.html",
+    "desc": "Automatic with federal extension, capped at 6 months. N.M. Admin. Code sect 3.1.4.12."
+  },
+  {
+    "title": "North Dakota Tax Extension",
+    "url": "north-dakota-extension.html",
+    "desc": "Automatic with federal extension recognized. N.D. Cent. Code sect 57-38-34."
+  },
+  {
+    "title": "Oklahoma Tax Extension",
+    "url": "oklahoma-extension.html",
+    "desc": "Conditionally automatic, 90% payment rule, 6 months. 68 Okla. Stat. sect 216."
+  },
+  {
+    "title": "Rhode Island Tax Extension",
+    "url": "rhode-island-extension.html",
+    "desc": "Conditionally automatic, 80% payment rule, 6 months. 280-RICR-20-55-2.6."
+  },
+  {
+    "title": "South Carolina Tax Extension",
+    "url": "south-carolina-extension.html",
+    "desc": "Conditionally automatic, 6 months. S.C. Code sect 12-6-4980."
+  },
+  {
+    "title": "South Dakota Tax Extension",
+    "url": "south-dakota-extension.html",
+    "desc": "No individual or general corporate income tax; Bank Franchise Tax only. SDCL ch. 10-43."
+  },
+  {
+    "title": "Tennessee Tax Extension",
+    "url": "tennessee-extension.html",
+    "desc": "No individual income tax since 2021; F&E Tax automatic 7 months. Tenn. Code Ann. sect 67-4-2015."
+  },
+  {
+    "title": "Utah Tax Extension",
+    "url": "utah-extension.html",
+    "desc": "Automatic, no form, 90% payment rule, 6 months. Utah Code Ann. sect 59-10-516."
+  },
+  {
+    "title": "Vermont Tax Extension",
+    "url": "vermont-extension.html",
+    "desc": "Automatic, matches federal extension. 32 V.S.A. sect 5868."
+  },
+  {
+    "title": "West Virginia Tax Extension",
+    "url": "west-virginia-extension.html",
+    "desc": "Automatic, matches federal, capped at 6 months. W. Va. Code St. R. sect 110-21-57."
+  },
+  {
+    "title": "Wisconsin Tax Extension",
+    "url": "wisconsin-extension.html",
+    "desc": "Automatic with federal extension attached, 6 months. Wis. Stat. sect 71.03(8)."
+  },
+  {
+    "title": "Wyoming Tax Extension",
+    "url": "wyoming-extension.html",
+    "desc": "No individual or corporate income tax. Wyo. Stat. Ann. tit. 39."
+  },
+  {
+    "title": "New York City Tax Extension Guide",
+    "url": "new-york-city-extension.html",
+    "desc": "NYC individual tax rides on NY State Form IT-370; business GCT/UBT uses Form NYC-6, automatic 6 months."
+  },
+  {
+    "title": "Philadelphia Tax Extension Guide",
+    "url": "philadelphia-extension.html",
+    "desc": "BIRT/NPT extension automatic, tied to federal extension, no separate city form. Wage Tax has no individual extension mechanism."
+  },
+  {
+    "title": "Ohio Municipalities Tax Extension Guide",
+    "url": "ohio-municipal-extension.html",
+    "desc": "Covers all ~600 Ohio municipalities (RITA, CCA, self-administered) under one statewide statute, Ohio Rev. Code sect 718.05(G)(2)."
+  },
+  {
+    "title": "Michigan Cities Tax Extension Guide",
+    "url": "michigan-cities-extension.html",
+    "desc": "Covers all ~24 Michigan cities with a city income tax, including Detroit, under MCL 141.664(1),(2)."
+  },
+  {
+    "title": "Kansas City Missouri Tax Extension Guide",
+    "url": "kansas-city-extension.html",
+    "desc": "Earnings tax, Form RD-112 (wage) / RD-111 (profits), automatic with timely filing and payment."
+  },
+  {
+    "title": "St. Louis Missouri Tax Extension Guide",
+    "url": "st-louis-extension.html",
+    "desc": "Earnings tax, Form E-8 (individual) / Form E-234 (business), payment due with request."
+  },
+  {
+    "title": "Portland Multnomah County Tax Extension Guide",
+    "url": "portland-multnomah-extension.html",
+    "desc": "Combined business tax, Form EXT, 6 months, 90%/100% payment safe harbor."
+  },
+  {
+    "title": "San Francisco Tax Extension Guide",
+    "url": "san-francisco-extension.html",
+    "desc": "Annual Business Tax Return extension request, not tied to federal extension, full payment due by original date."
+  },
+  {
     "title": "Master Extension Matrix",
     "url": "master-extension-matrix.html",
     "desc": "Sortable table of every jurisdiction and tax type."

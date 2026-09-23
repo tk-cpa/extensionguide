@@ -15,13 +15,13 @@
 # nonprofits, information returns, estate tax, excise.
 #
 # LAST UPDATED: 2026-09-23
-# BUILD STATUS: Federal section live. 29 states live (CA, NY, TX, FL, IL, PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI, AL, AZ, AR, CO, CT, DE, HI, ID, IN, IA, KS, KY, LA, ME). Interactive US map live (29 states clickable, 21 states + DC and 8 city/local jurisdictions marked coming soon). Remaining states and local coverage in progress.
+# BUILD STATUS: Federal section live. All 50 states + DC live. 8 major city/local jurisdictions live (NYC, Philadelphia, Ohio municipalities, Michigan cities, Kansas City MO, St. Louis MO, Portland/Multnomah OR, San Francisco). Interactive US map live (all 50 states + DC and all 8 city/local pins clickable; only Puerto Rico marked coming soon).
 #
 # PAGES
 - index.html: Extension Guide home - entity-type router and core slogan.
 - federal-hub.html: Federal extensions hub - links to every federal extension form.
-- states-hub.html: State extensions hub - 29 states live now.
-- map.html: Interactive US extension map - click any live state; city/local pins (NYC, Philadelphia, and others) marked coming soon.
+- states-hub.html: State extensions hub - all 50 states + DC live now, plus a local/city jurisdictions table.
+- map.html: Interactive US extension map - click any state (all 50 + DC live) or city pin (8 local jurisdictions live); Puerto Rico marked coming soon.
 - california-extension.html: California individual and business extensions - both automatic. Cal. Code Regs. tit. 18 sect 18567; R&TC sect 18604.
 - new-york-extension.html: New York Form IT-370 individual and Form CT-5 corporate extensions. N.Y. Tax Law sect 657, sect 1085.
 - texas-extension.html: Texas franchise tax extension, Form 05-164, not automatic. No individual income tax in Texas. 34 Tex. Admin. Code sect 3.585.
@@ -51,6 +51,36 @@
 - kentucky-extension.html: Kentucky automatic with federal extension, 6 months (12 abroad). 103 KAR 15:050.
 - louisiana-extension.html: Louisiana automatic, no form, 6 months. La. R.S. sect 47:103.
 - maine-extension.html: Maine automatic with federal extension, equivalent period. 36 M.R.S. sect 5231.
+- alaska-extension.html: Alaska no individual income tax; corporate return due 30 days after federal due date. AS 43.20.030(a),(c).
+- district-of-columbia-extension.html: DC Form FR-127, not automatic, 6 months, full payment due with request. DC OTR guidance.
+- maryland-extension.html: Maryland Form 502E required unless no tax owed with federal extension. COMAR 03.04.02.14.
+- minnesota-extension.html: Minnesota automatic to October 15, no form, 90% payment presumption. Minn. Stat. sect 289A.60, subd. 1(c).
+- mississippi-extension.html: Mississippi automatic with federal extension attached, 6 months. Miss. Code Ann. sect 27-7-50.
+- missouri-extension.html: Missouri automatic with federal extension attached, up to 6 months. RSMo sect 143.551.
+- montana-extension.html: Montana automatic, no form, 6 months. Mont. Code Ann. sect 15-30-2604(3)(a).
+- nebraska-extension.html: Nebraska federal extension operates automatically, up to 7 months. Neb. Rev. Stat. sect 77-2770.
+- nevada-extension.html: Nevada no individual or corporate income tax. Nev. Const. art. 10, sect 1.
+- new-hampshire-extension.html: New Hampshire no individual income tax; Interest and Dividends Tax repealed effective 1-1-2025.
+- new-mexico-extension.html: New Mexico automatic with federal extension, capped at 6 months. N.M. Admin. Code sect 3.1.4.12.
+- north-dakota-extension.html: North Dakota automatic with federal extension recognized. N.D. Cent. Code sect 57-38-34(6).
+- oklahoma-extension.html: Oklahoma conditionally automatic, 90% payment rule, 6 months. 68 Okla. Stat. sect 216.
+- rhode-island-extension.html: Rhode Island conditionally automatic, 80% payment rule, 6 months. 280-RICR-20-55-2.6.
+- south-carolina-extension.html: South Carolina conditionally automatic, 6 months. S.C. Code sect 12-6-4980.
+- south-dakota-extension.html: South Dakota no individual or general corporate income tax; Bank Franchise Tax only. SDCL ch. 10-43.
+- tennessee-extension.html: Tennessee no individual income tax since 2021 repeal of Hall tax; F&amp;E Tax automatic 7 months. Tenn. Code Ann. sect 67-4-2015(h).
+- utah-extension.html: Utah automatic, no form, 90% payment rule, 6 months. Utah Code Ann. sect 59-10-516.
+- vermont-extension.html: Vermont automatic, matches federal extension; corporations get federal date plus 1 month. 32 V.S.A. sect 5868.
+- west-virginia-extension.html: West Virginia automatic, matches federal, capped at 6 months. W. Va. Code St. R. sect 110-21-57.
+- wisconsin-extension.html: Wisconsin automatic with federal extension attached, 6 months. Wis. Stat. sect 71.03(8).
+- wyoming-extension.html: Wyoming no individual or corporate income tax. Wyo. Stat. Ann. tit. 39.
+- new-york-city-extension.html: NYC individual tax rides on NY State Form IT-370; business GCT/UBT uses Form NYC-6, automatic 6 months. N.Y.C. Admin. Code sect 11-605(1).
+- philadelphia-extension.html: Philadelphia BIRT/NPT extension automatic, tied to federal extension, no separate city form; Wage Tax has no individual extension mechanism. Philadelphia Dept. of Revenue guidance.
+- ohio-municipal-extension.html: Covers all ~600 Ohio municipalities (RITA, CCA, self-administered) under one statewide statute. Ohio Rev. Code sect 718.05(G)(2).
+- michigan-cities-extension.html: Covers all ~24 Michigan cities with a city income tax, including Detroit, under one statewide statute. MCL 141.664(1),(2).
+- kansas-city-extension.html: Kansas City MO earnings tax, Form RD-112 (wage) / RD-111 (profits), automatic with timely filing and payment. KCMO Code of Ordinances ch. 68, art. VI.
+- st-louis-extension.html: St. Louis MO earnings tax, Form E-8 (individual) / Form E-234 (business), payment due with request. City of St. Louis Collector of Revenue guidance.
+- portland-multnomah-extension.html: Portland/Multnomah County OR combined business tax, Form EXT, 6 months, 90%/100% payment safe harbor. City of Portland/Multnomah County Revenue Division guidance.
+- san-francisco-extension.html: San Francisco Annual Business Tax Return extension request, not tied to federal extension, full payment due by original date. SF Office of the Treasurer and Tax Collector guidance.
 - federal-4868-individual-extension.html: Form 4868 individual extension - automatic 6 months, IRC 6081, Treas. Reg. 1.6081-4.
 - federal-7004-business-extension.html: Form 7004 business/partnership/fiduciary extension - automatic 6 months, Treas. Reg. 1.6081-3.
 - federal-8868-nonprofit-extension.html: Form 8868 exempt organization extension - automatic 6 months.
@@ -60,6 +90,6 @@
 - how-to-paper-file-extension.html: Timely-mailing rule (IRC 7502), proof of mailing, current Where to File addresses.
 - efile-and-third-party-services.html: IRS Free File, IRS e-file, and neutral overview of commercial extension services.
 - extension-penalties-and-interest.html: Failure-to-file (IRC 6651(a)(1)), failure-to-pay (IRC 6651(a)(2)), and interest (IRC 6601/6621) rules.
-- master-extension-matrix.html: Flagship sortable table of every jurisdiction and tax type. Federal live; state/local in progress.
+- master-extension-matrix.html: Flagship sortable table of every jurisdiction and tax type. Federal, all 50 states + DC, and 8 city/local jurisdictions live; Puerto Rico in progress.
 - faq.html: Common extension questions answered.
 - disclaimer.html: Site disclaimer and terms.

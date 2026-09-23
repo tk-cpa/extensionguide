@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive US Tax Extension Map | Extension Guide</title>
-<meta name="description" content="Click any state for its individual and business tax filing extension rules. Coral states are live now; grey states and city pins are coming soon.">
+<meta name="description" content="Click any state for its individual and business tax filing extension rules. Every state, DC, and 8 major city/local jurisdictions are now live. Only Puerto Rico remains.">
 <link rel="canonical" href="https://extensionguide.com/map.html">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -43,7 +43,9 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 .state.live:hover{fill:var(--coral);stroke:var(--coral-600)}
 .state.pending:hover{fill:var(--ink-20)}
 .city-dot{fill:#fff;stroke:var(--blue-acc);stroke-width:2px;cursor:default}
-.city-dot:hover{fill:var(--blue-bg)}
+.city-dot.live{cursor:pointer;fill:var(--coral,#F65F5A);stroke:var(--ink,#111)}
+.city-dot.live:hover{fill:#fff;stroke:var(--coral,#F65F5A)}
+.city-dot.pending:hover{fill:var(--blue-bg)}
 .map-tooltip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;font-weight:600;padding:7px 11px;border-radius:6px;transform:translate(-50%,-135%);white-space:nowrap;opacity:0;transition:opacity .08s;z-index:5;line-height:1.4}
 .map-tooltip .tt-sub{display:block;font-weight:400;font-size:11px;color:rgba(255,255,255,.65);margin-top:2px}
 .map-tooltip.show{opacity:1}
@@ -52,7 +54,8 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 .article h2{font-family:var(--font-display);font-size:18px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
 .article p{font-size:14px;line-height:1.7;color:var(--ink-80);margin-bottom:12px}
 .pin-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
-.pin-chip{font-size:12.5px;font-weight:500;color:var(--ink-60);border:1.5px dashed var(--ink-20);border-radius:999px;padding:6px 14px;background:var(--white)}
+.pin-chip{font-size:12.5px;font-weight:500;color:var(--ink,#111);border:1.5px solid var(--coral,#F65F5A);border-radius:999px;padding:6px 14px;background:var(--white);text-decoration:none;display:inline-block}
+.pin-chip:hover{background:var(--coral,#F65F5A);color:#fff}
 .related{margin-top:32px;padding-top:20px;border-top:1px solid var(--ink-20)}
 .related-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-60);margin-bottom:12px}
 .related-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -66,7 +69,7 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 </style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Interactive US Tax Extension Map | Extension Guide">
-<meta property="og:description" content="Click any state for its individual and business tax filing extension rules. Coral states are live now; grey states and city pins are coming soon.">
+<meta property="og:description" content="Click any state for its individual and business tax filing extension rules. Every state, DC, and 8 major city/local jurisdictions are now live. Only Puerto Rico remains.">
 <meta property="og:url" content="https://extensionguide.com/map.html">
 <meta property="og:site_name" content="Extension Guide">
 <script type="application/ld+json">
@@ -94,8 +97,8 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 </div>
 <div class="ph"><div class="phi">
   <h1>Interactive US Tax Extension Map</h1>
-  <div class="sub">Click any coral state for its individual and business filing-extension rules. Hollow city pins mark local/municipal taxes (New York City, Philadelphia, and others) that are next in the build queue. Updated 9-23-2026.</div>
-  <div class="badges"><span class="badge">29 states live</span><span class="badge">21 states + DC coming soon</span><span class="badge">8 city/local jurisdictions coming soon</span></div>
+  <div class="sub">Click any coral state for its individual and business filing-extension rules. Solid coral city pins mark local/municipal taxes (New York City, Philadelphia, and others) that are now live too. Updated 9-23-2026.</div>
+  <div class="badges"><span class="badge">50 states + DC live</span><span class="badge">8 city/local jurisdictions live</span><span class="badge">Puerto Rico coming soon</span></div>
 </div></div>
 <div class="back"><a href="states-hub.html">&#8592; State Extensions hub</a></div>
 
@@ -103,7 +106,7 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
   <div class="legend">
     <div class="legend-item"><span class="legend-swatch" style="background:var(--coral-100,#FCE3E2);border-color:var(--coral-600,#E04A45)"></span> Live - click to open the state's guide</div>
     <div class="legend-item"><span class="legend-swatch" style="background:var(--ink-10,#EDEEF0)"></span> Coming soon</div>
-    <div class="legend-item"><span class="legend-dot"></span> City / local tax jurisdiction - coming soon</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--coral,#F65F5A);border-radius:50%;border:2px solid var(--ink,#111)"></span> City / local tax jurisdiction - live, click to open</div>
   </div>
   <div class="map-wrap" id="map-wrap">
     <svg id="us-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
@@ -113,17 +116,17 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 </div>
 
 <div class="article">
-<h2>City and local tax jurisdictions (coming soon)</h2>
-<p>These localities impose their own income, wage, or earnings taxes independent of the state, each with its own extension rules. They are pinned on the map above as hollow markers and will go live in a future build session, in this order:</p>
+<h2>City and local tax jurisdictions (live)</h2>
+<p>These localities impose their own income, wage, or earnings taxes independent of the state, each with its own extension rules. They are pinned on the map above as solid coral markers - click a pin or the links below to open a guide. Ohio's page covers all roughly 600 RITA-, CCA-, and self-administered Ohio municipalities under one statewide statute; Michigan's page covers all roughly 24 Michigan cities with a city income tax, including Detroit, under one statewide statute.</p>
 <div class="pin-grid">
-  <span class="pin-chip">New York City</span>
-  <span class="pin-chip">Philadelphia</span>
-  <span class="pin-chip">Ohio RITA / CCA municipalities</span>
-  <span class="pin-chip">Michigan cities</span>
-  <span class="pin-chip">Kansas City, MO</span>
-  <span class="pin-chip">St. Louis, MO</span>
-  <span class="pin-chip">Portland / Multnomah County, OR</span>
-  <span class="pin-chip">San Francisco, CA</span>
+  <a href="new-york-city-extension.html" class="pin-chip">New York City</a>
+  <a href="philadelphia-extension.html" class="pin-chip">Philadelphia</a>
+  <a href="ohio-municipal-extension.html" class="pin-chip">Ohio RITA / CCA municipalities</a>
+  <a href="michigan-cities-extension.html" class="pin-chip">Michigan cities</a>
+  <a href="kansas-city-extension.html" class="pin-chip">Kansas City, MO</a>
+  <a href="st-louis-extension.html" class="pin-chip">St. Louis, MO</a>
+  <a href="portland-multnomah-extension.html" class="pin-chip">Portland / Multnomah County, OR</a>
+  <a href="san-francisco-extension.html" class="pin-chip">San Francisco, CA</a>
 </div>
 
 <div class="related">
@@ -151,43 +154,43 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 <script>
 // FIPS state code -> {postal, slug, name}. Slug is null for jurisdictions not yet live.
 const STATES = {
-  "01":{postal:"AL",name:"Alabama",slug:"alabama-extension.html"},"02":{postal:"AK",name:"Alaska",slug:null},
+  "01":{postal:"AL",name:"Alabama",slug:"alabama-extension.html"},"02":{postal:"AK",name:"Alaska",slug:"alaska-extension.html"},
   "04":{postal:"AZ",name:"Arizona",slug:"arizona-extension.html"},"05":{postal:"AR",name:"Arkansas",slug:"arkansas-extension.html"},
   "06":{postal:"CA",name:"California",slug:"california-extension.html"},"08":{postal:"CO",name:"Colorado",slug:"colorado-extension.html"},
   "09":{postal:"CT",name:"Connecticut",slug:"connecticut-extension.html"},"10":{postal:"DE",name:"Delaware",slug:"delaware-extension.html"},
-  "11":{postal:"DC",name:"District of Columbia",slug:null},"12":{postal:"FL",name:"Florida",slug:"florida-extension.html"},
+  "11":{postal:"DC",name:"District of Columbia",slug:"district-of-columbia-extension.html"},"12":{postal:"FL",name:"Florida",slug:"florida-extension.html"},
   "13":{postal:"GA",name:"Georgia",slug:"georgia-extension.html"},"15":{postal:"HI",name:"Hawaii",slug:"hawaii-extension.html"},
   "16":{postal:"ID",name:"Idaho",slug:"idaho-extension.html"},"17":{postal:"IL",name:"Illinois",slug:"illinois-extension.html"},
   "18":{postal:"IN",name:"Indiana",slug:"indiana-extension.html"},"19":{postal:"IA",name:"Iowa",slug:"iowa-extension.html"},
   "20":{postal:"KS",name:"Kansas",slug:"kansas-extension.html"},"21":{postal:"KY",name:"Kentucky",slug:"kentucky-extension.html"},
   "22":{postal:"LA",name:"Louisiana",slug:"louisiana-extension.html"},"23":{postal:"ME",name:"Maine",slug:"maine-extension.html"},
-  "24":{postal:"MD",name:"Maryland",slug:null},"25":{postal:"MA",name:"Massachusetts",slug:"massachusetts-extension.html"},
-  "26":{postal:"MI",name:"Michigan",slug:"michigan-extension.html"},"27":{postal:"MN",name:"Minnesota",slug:null},
-  "28":{postal:"MS",name:"Mississippi",slug:null},"29":{postal:"MO",name:"Missouri",slug:null},
-  "30":{postal:"MT",name:"Montana",slug:null},"31":{postal:"NE",name:"Nebraska",slug:null},
-  "32":{postal:"NV",name:"Nevada",slug:null},"33":{postal:"NH",name:"New Hampshire",slug:null},
-  "34":{postal:"NJ",name:"New Jersey",slug:"new-jersey-extension.html"},"35":{postal:"NM",name:"New Mexico",slug:null},
+  "24":{postal:"MD",name:"Maryland",slug:"maryland-extension.html"},"25":{postal:"MA",name:"Massachusetts",slug:"massachusetts-extension.html"},
+  "26":{postal:"MI",name:"Michigan",slug:"michigan-extension.html"},"27":{postal:"MN",name:"Minnesota",slug:"minnesota-extension.html"},
+  "28":{postal:"MS",name:"Mississippi",slug:"mississippi-extension.html"},"29":{postal:"MO",name:"Missouri",slug:"missouri-extension.html"},
+  "30":{postal:"MT",name:"Montana",slug:"montana-extension.html"},"31":{postal:"NE",name:"Nebraska",slug:"nebraska-extension.html"},
+  "32":{postal:"NV",name:"Nevada",slug:"nevada-extension.html"},"33":{postal:"NH",name:"New Hampshire",slug:"new-hampshire-extension.html"},
+  "34":{postal:"NJ",name:"New Jersey",slug:"new-jersey-extension.html"},"35":{postal:"NM",name:"New Mexico",slug:"new-mexico-extension.html"},
   "36":{postal:"NY",name:"New York",slug:"new-york-extension.html"},"37":{postal:"NC",name:"North Carolina",slug:"north-carolina-extension.html"},
-  "38":{postal:"ND",name:"North Dakota",slug:null},"39":{postal:"OH",name:"Ohio",slug:"ohio-extension.html"},
-  "40":{postal:"OK",name:"Oklahoma",slug:null},"41":{postal:"OR",name:"Oregon",slug:"oregon-extension.html"},
-  "42":{postal:"PA",name:"Pennsylvania",slug:"pennsylvania-extension.html"},"44":{postal:"RI",name:"Rhode Island",slug:null},
-  "45":{postal:"SC",name:"South Carolina",slug:null},"46":{postal:"SD",name:"South Dakota",slug:null},
-  "47":{postal:"TN",name:"Tennessee",slug:null},"48":{postal:"TX",name:"Texas",slug:"texas-extension.html"},
-  "49":{postal:"UT",name:"Utah",slug:null},"50":{postal:"VT",name:"Vermont",slug:null},
+  "38":{postal:"ND",name:"North Dakota",slug:"north-dakota-extension.html"},"39":{postal:"OH",name:"Ohio",slug:"ohio-extension.html"},
+  "40":{postal:"OK",name:"Oklahoma",slug:"oklahoma-extension.html"},"41":{postal:"OR",name:"Oregon",slug:"oregon-extension.html"},
+  "42":{postal:"PA",name:"Pennsylvania",slug:"pennsylvania-extension.html"},"44":{postal:"RI",name:"Rhode Island",slug:"rhode-island-extension.html"},
+  "45":{postal:"SC",name:"South Carolina",slug:"south-carolina-extension.html"},"46":{postal:"SD",name:"South Dakota",slug:"south-dakota-extension.html"},
+  "47":{postal:"TN",name:"Tennessee",slug:"tennessee-extension.html"},"48":{postal:"TX",name:"Texas",slug:"texas-extension.html"},
+  "49":{postal:"UT",name:"Utah",slug:"utah-extension.html"},"50":{postal:"VT",name:"Vermont",slug:"vermont-extension.html"},
   "51":{postal:"VA",name:"Virginia",slug:"virginia-extension.html"},"53":{postal:"WA",name:"Washington",slug:"washington-extension.html"},
-  "54":{postal:"WV",name:"West Virginia",slug:null},"55":{postal:"WI",name:"Wisconsin",slug:null},
-  "56":{postal:"WY",name:"Wyoming",slug:null},"72":{postal:"PR",name:"Puerto Rico",slug:null}
+  "54":{postal:"WV",name:"West Virginia",slug:"west-virginia-extension.html"},"55":{postal:"WI",name:"Wisconsin",slug:"wisconsin-extension.html"},
+  "56":{postal:"WY",name:"Wyoming",slug:"wyoming-extension.html"},"72":{postal:"PR",name:"Puerto Rico",slug:null}
 };
 
 const CITIES = [
-  {name:"New York City", sub:"NYC earnings/nonresident tax - coming soon", lon:-74.0060, lat:40.7128},
-  {name:"Philadelphia", sub:"Wage/BIRT extensions - coming soon", lon:-75.1652, lat:39.9526},
-  {name:"Ohio RITA / CCA municipalities", sub:"Municipal net profits tax - coming soon", lon:-81.6944, lat:41.4993},
-  {name:"Michigan cities (Detroit and others)", sub:"City income tax extensions - coming soon", lon:-83.0458, lat:42.3314},
-  {name:"Kansas City, MO", sub:"Earnings tax extensions - coming soon", lon:-94.5786, lat:39.0997},
-  {name:"St. Louis, MO", sub:"Earnings tax extensions - coming soon", lon:-90.1994, lat:38.6270},
-  {name:"Portland / Multnomah County, OR", sub:"Metro/county tax extensions - coming soon", lon:-122.6784, lat:45.5152},
-  {name:"San Francisco, CA", sub:"Business tax extensions - coming soon", lon:-122.4194, lat:37.7749}
+  {name:"New York City", sub:"NYC earnings/business tax extensions - live", lon:-74.0060, lat:40.7128, slug:"new-york-city-extension.html"},
+  {name:"Philadelphia", sub:"Wage/BIRT extensions - live", lon:-75.1652, lat:39.9526, slug:"philadelphia-extension.html"},
+  {name:"Ohio RITA / CCA municipalities", sub:"Municipal net profits tax - live", lon:-81.6944, lat:41.4993, slug:"ohio-municipal-extension.html"},
+  {name:"Michigan cities (Detroit and others)", sub:"City income tax extensions - live", lon:-83.0458, lat:42.3314, slug:"michigan-cities-extension.html"},
+  {name:"Kansas City, MO", sub:"Earnings tax extensions - live", lon:-94.5786, lat:39.0997, slug:"kansas-city-extension.html"},
+  {name:"St. Louis, MO", sub:"Earnings tax extensions - live", lon:-90.1994, lat:38.6270, slug:"st-louis-extension.html"},
+  {name:"Portland / Multnomah County, OR", sub:"Metro/county tax extensions - live", lon:-122.6784, lat:45.5152, slug:"portland-multnomah-extension.html"},
+  {name:"San Francisco, CA", sub:"Business tax extensions - live", lon:-122.4194, lat:37.7749, slug:"san-francisco-extension.html"}
 ];
 
 const width = 960, height = 600;
@@ -237,14 +240,18 @@ fetch("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
       .data(CITIES)
       .enter()
       .append("circle")
-      .attr("class", "city-dot")
+      .attr("class", d => "city-dot " + (d.slug ? "live" : "pending"))
       .attr("r", 6)
       .attr("cx", d => { const p = projection([d.lon, d.lat]); return p ? p[0] : -100; })
       .attr("cy", d => { const p = projection([d.lon, d.lat]); return p ? p[1] : -100; })
       .on("mousemove", function(evt, d) {
-        showTip(d.name + '<span class="tt-sub">' + d.sub + '</span>', evt);
+        const status = d.slug ? "Live - click to open" : "Coming soon";
+        showTip(d.name + '<span class="tt-sub">' + status + '</span>', evt);
       })
-      .on("mouseleave", hideTip);
+      .on("mouseleave", hideTip)
+      .on("click", function(evt, d) {
+        if (d.slug) window.location.href = d.slug;
+      });
   })
   .catch(function(err) {
     document.getElementById("map-wrap").innerHTML = '<p style="padding:24px;font-size:13px;color:var(--ink-60)">Map data could not be loaded. See the <a href="states-hub.html">State Extensions hub</a> for the full state list.</p>';
