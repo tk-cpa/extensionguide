@@ -15,11 +15,17 @@
 # nonprofits, information returns, estate tax, excise.
 #
 # LAST UPDATED: 2026-09-22
-# BUILD STATUS: Federal section live. State, local, and matrix data in progress.
+# BUILD STATUS: Federal section live. 5 states (CA, NY, TX, FL, IL) live. Remaining states, local, and matrix data in progress.
 #
 # PAGES
 - index.html: Extension Guide home - entity-type router and core slogan.
 - federal-hub.html: Federal extensions hub - links to every federal extension form.
+- states-hub.html: State extensions hub - California, New York, Texas, Florida, Illinois live now.
+- california-extension.html: California individual and business extensions - both automatic. Cal. Code Regs. tit. 18 sect 18567; R&TC sect 18604.
+- new-york-extension.html: New York Form IT-370 individual and Form CT-5 corporate extensions. N.Y. Tax Law sect 657, sect 1085.
+- texas-extension.html: Texas franchise tax extension, Form 05-164, not automatic. No individual income tax in Texas. 34 Tex. Admin. Code sect 3.585.
+- florida-extension.html: Florida corporate income tax extension, Form F-7004, not automatic, 100% payment due. No individual income tax in Florida. Fla. Stat. sect 220.222.
+- illinois-extension.html: Illinois individual and corporate extensions - both automatic. 35 ILCS 5/505; 86 Ill. Admin. Code sect 100.5020.
 - federal-4868-individual-extension.html: Form 4868 individual extension - automatic 6 months, IRC 6081, Treas. Reg. 1.6081-4.
 - federal-7004-business-extension.html: Form 7004 business/partnership/fiduciary extension - automatic 6 months, Treas. Reg. 1.6081-3.
 - federal-8868-nonprofit-extension.html: Form 8868 exempt organization extension - automatic 6 months.

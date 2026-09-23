@@ -55,6 +55,36 @@
     "desc": "Failure-to-file, failure-to-pay, and interest rules and current rates."
   },
   {
+    "title": "State Extensions Hub",
+    "url": "states-hub.html",
+    "desc": "State-by-state extension rules. California, New York, Texas, Florida, Illinois live now."
+  },
+  {
+    "title": "California Tax Extension",
+    "url": "california-extension.html",
+    "desc": "Individual and business extensions, both automatic. Cal. Code Regs. tit. 18 sect 18567; R&TC sect 18604."
+  },
+  {
+    "title": "New York Tax Extension",
+    "url": "new-york-extension.html",
+    "desc": "Form IT-370 individual, Form CT-5 corporate. N.Y. Tax Law sect 657, sect 1085."
+  },
+  {
+    "title": "Texas Franchise Tax Extension",
+    "url": "texas-extension.html",
+    "desc": "No individual income tax. Form 05-164, not automatic. 34 Tex. Admin. Code sect 3.585."
+  },
+  {
+    "title": "Florida Corporate Income Tax Extension",
+    "url": "florida-extension.html",
+    "desc": "No individual income tax. Form F-7004, not automatic, 100% payment due. Fla. Stat. sect 220.222."
+  },
+  {
+    "title": "Illinois Tax Extension",
+    "url": "illinois-extension.html",
+    "desc": "Individual and corporate extensions, both automatic. 35 ILCS 5/505; 86 Ill. Admin. Code sect 100.5020."
+  },
+  {
     "title": "Master Extension Matrix",
     "url": "master-extension-matrix.html",
     "desc": "Sortable table of every jurisdiction and tax type."

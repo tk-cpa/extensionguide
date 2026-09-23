@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Master Extension Matrix - Every Jurisdiction, Every Tax Type | Extension Guide</title>
-<meta name="description" content="A single sortable table of federal, state, and local tax filing extension rules by jurisdiction and tax type. Federal live; state and local build in progress.">
+<meta name="description" content="A single sortable table of federal, state, and local tax filing extension rules by jurisdiction and tax type. Federal and 5 states (CA, NY, TX, FL, IL) live; more states and local jurisdictions build in progress.">
 <link rel="canonical" href="https://extensionguide.com/master-extension-matrix.html">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -78,13 +78,14 @@ table.dt tr:last-child td{border-bottom:none}
   <div class="cat-nav-inner">
     <a href="index.html">Home</a>
     <a href="federal-hub.html">Federal</a>
+    <a href="states-hub.html">States</a>
     <a href="master-extension-matrix.html" class="active">Master Matrix</a>
     <a href="extension-penalties-and-interest.html">Penalties &amp; Interest</a>
     <a href="faq.html">FAQ</a>
     <a href="disclaimer.html">Disclaimer</a>
   </div>
 </div>
-<div class="ph"><div class="phi"><h1>Master Extension Matrix</h1><div class="sub">Every jurisdiction and tax type &nbsp;&bull;&nbsp; Build in progress &nbsp;&bull;&nbsp; Updated 9-22-2026</div></div></div>
+<div class="ph"><div class="phi"><h1>Master Extension Matrix</h1><div class="sub">Every jurisdiction and tax type &nbsp;&bull;&nbsp; Federal + 5 states live &nbsp;&bull;&nbsp; Updated 9-22-2026</div></div></div>
 <div class="back"><a href="index.html">&#8592; Extension Guide home</a></div>
 <div class="article">
 <div class="slogan"><p>An extension to file is not an extension to pay tax.</p></div>
@@ -94,7 +95,8 @@ table.dt tr:last-child td{border-bottom:none}
 <table class="dt">
 <tr><th>Section</th><th>Status</th><th>Coverage</th></tr>
 <tr><td>Federal</td><td><span class="status-pill live">Live</span></td><td>Form 4868, 7004, 8868, 4768, 8809, special situations, penalties &amp; interest</td></tr>
-<tr><td>States (CA, NY, TX, FL, IL, PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI)</td><td><span class="status-pill pending">Pending</span></td><td>Scheduled next build session</td></tr>
+<tr><td>States: CA, NY, TX, FL, IL</td><td><span class="status-pill live">Live</span></td><td>Individual and business/entity extensions, see <a href="states-hub.html">states hub</a></td></tr>
+<tr><td>States: PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI</td><td><span class="status-pill pending">Pending</span></td><td>Scheduled next build session</td></tr>
 <tr><td>Remaining states + DC</td><td><span class="status-pill pending">Pending</span></td><td>Scheduled build session after high-volume states</td></tr>
 <tr><td>City &amp; local (NYC, Philadelphia, Ohio RITA/CCA, Michigan cities, Kansas City, St. Louis, Portland/Multnomah, San Francisco)</td><td><span class="status-pill pending">Pending</span></td><td>Scheduled build session after state coverage</td></tr>
 <tr><td>Excise, estate/inheritance edge cases</td><td><span class="status-pill pending">Pending</span></td><td>Final build session</td></tr>
@@ -108,7 +110,15 @@ table.dt tr:last-child td{border-bottom:none}
 </table>
 </div>
 
-<div class="note-box">State and local rows will populate this table automatically as extensions-data.json is extended in upcoming build sessions. Nothing is estimated or interpolated - each jurisdiction is added only once its record is verified against its own primary source.</div>
+<h2>State extensions (5 states live)</h2>
+<div style="overflow-x:auto">
+<table class="dt" id="stateTable">
+<thead><tr><th>State / Filer / Return</th><th>Form</th><th>Automatic?</th><th>Length</th><th>Authority</th></tr></thead>
+<tbody id="stateBody"></tbody>
+</table>
+</div>
+
+<div class="note-box">Remaining state and local rows will populate this table automatically as extensions-data.json is extended in upcoming build sessions. Nothing is estimated or interpolated - each jurisdiction is added only once its record is verified against its own primary source.</div>
 
 <div class="source-row">Data source: extensions-data.json, this site's repository. Each record cites its own primary authority and as-of date; see individual federal guide pages for full citations.</div>
 <div class="disc">This page is for informational purposes only and is not legal, tax, or accounting advice. <a href="disclaimer.html">Full disclaimer.</a></div>
@@ -124,8 +134,14 @@ fetch('extensions-data.json').then(r=>r.json()).then(function(data){
   var tbody = document.getElementById('fedBody');
   data.filter(function(r){return r.jurisdiction === 'Federal';}).forEach(function(r){
     var tr = document.createElement('tr');
-    tr.innerHTML = '<td><strong>'+r.filer+'</strong></td><td>'+r.form+'</td><td>'+(r.automatic?'Yes':'No')+'</td><td>'+r.length+'</td><td style="font-size:11px;color:var(--ink-60)">'+r.authority+'</td>';
+    tr.innerHTML = '<td><strong>'+r.filer+'</strong></td><td>'+r.form+'</td><td>'+(r.automatic===true?'Yes':(r.automatic===false?'No':String(r.automatic)))+'</td><td>'+r.length+'</td><td style="font-size:11px;color:var(--ink-60)">'+r.authority+'</td>';
     tbody.appendChild(tr);
+  });
+  var stateBody = document.getElementById('stateBody');
+  data.filter(function(r){return r.jurisdiction !== 'Federal';}).forEach(function(r){
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td><strong>'+r.jurisdiction+'</strong> - '+r.filer+'</td><td>'+r.form+'</td><td>'+(r.automatic===true?'Yes':(r.automatic===false?'No':String(r.automatic)))+'</td><td>'+r.length+'</td><td style="font-size:11px;color:var(--ink-60)">'+r.authority+'</td>';
+    stateBody.appendChild(tr);
   });
 }).catch(function(e){console.error('extensions-data.json load failed', e);});
 </script>
