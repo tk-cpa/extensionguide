@@ -95,7 +95,7 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 <div class="ph"><div class="phi">
   <h1>Interactive US Tax Extension Map</h1>
   <div class="sub">Click any coral state for its individual and business filing-extension rules. Hollow city pins mark local/municipal taxes (New York City, Philadelphia, and others) that are next in the build queue. Updated 9-23-2026.</div>
-  <div class="badges"><span class="badge">15 states live</span><span class="badge">35 states + DC coming soon</span><span class="badge">8 city/local jurisdictions coming soon</span></div>
+  <div class="badges"><span class="badge">29 states live</span><span class="badge">21 states + DC coming soon</span><span class="badge">8 city/local jurisdictions coming soon</span></div>
 </div></div>
 <div class="back"><a href="states-hub.html">&#8592; State Extensions hub</a></div>
 
@@ -151,16 +151,16 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 <script>
 // FIPS state code -> {postal, slug, name}. Slug is null for jurisdictions not yet live.
 const STATES = {
-  "01":{postal:"AL",name:"Alabama",slug:null},"02":{postal:"AK",name:"Alaska",slug:null},
-  "04":{postal:"AZ",name:"Arizona",slug:null},"05":{postal:"AR",name:"Arkansas",slug:null},
-  "06":{postal:"CA",name:"California",slug:"california-extension.html"},"08":{postal:"CO",name:"Colorado",slug:null},
-  "09":{postal:"CT",name:"Connecticut",slug:null},"10":{postal:"DE",name:"Delaware",slug:null},
+  "01":{postal:"AL",name:"Alabama",slug:"alabama-extension.html"},"02":{postal:"AK",name:"Alaska",slug:null},
+  "04":{postal:"AZ",name:"Arizona",slug:"arizona-extension.html"},"05":{postal:"AR",name:"Arkansas",slug:"arkansas-extension.html"},
+  "06":{postal:"CA",name:"California",slug:"california-extension.html"},"08":{postal:"CO",name:"Colorado",slug:"colorado-extension.html"},
+  "09":{postal:"CT",name:"Connecticut",slug:"connecticut-extension.html"},"10":{postal:"DE",name:"Delaware",slug:"delaware-extension.html"},
   "11":{postal:"DC",name:"District of Columbia",slug:null},"12":{postal:"FL",name:"Florida",slug:"florida-extension.html"},
-  "13":{postal:"GA",name:"Georgia",slug:"georgia-extension.html"},"15":{postal:"HI",name:"Hawaii",slug:null},
-  "16":{postal:"ID",name:"Idaho",slug:null},"17":{postal:"IL",name:"Illinois",slug:"illinois-extension.html"},
-  "18":{postal:"IN",name:"Indiana",slug:null},"19":{postal:"IA",name:"Iowa",slug:null},
-  "20":{postal:"KS",name:"Kansas",slug:null},"21":{postal:"KY",name:"Kentucky",slug:null},
-  "22":{postal:"LA",name:"Louisiana",slug:null},"23":{postal:"ME",name:"Maine",slug:null},
+  "13":{postal:"GA",name:"Georgia",slug:"georgia-extension.html"},"15":{postal:"HI",name:"Hawaii",slug:"hawaii-extension.html"},
+  "16":{postal:"ID",name:"Idaho",slug:"idaho-extension.html"},"17":{postal:"IL",name:"Illinois",slug:"illinois-extension.html"},
+  "18":{postal:"IN",name:"Indiana",slug:"indiana-extension.html"},"19":{postal:"IA",name:"Iowa",slug:"iowa-extension.html"},
+  "20":{postal:"KS",name:"Kansas",slug:"kansas-extension.html"},"21":{postal:"KY",name:"Kentucky",slug:"kentucky-extension.html"},
+  "22":{postal:"LA",name:"Louisiana",slug:"louisiana-extension.html"},"23":{postal:"ME",name:"Maine",slug:"maine-extension.html"},
   "24":{postal:"MD",name:"Maryland",slug:null},"25":{postal:"MA",name:"Massachusetts",slug:"massachusetts-extension.html"},
   "26":{postal:"MI",name:"Michigan",slug:"michigan-extension.html"},"27":{postal:"MN",name:"Minnesota",slug:null},
   "28":{postal:"MS",name:"Mississippi",slug:null},"29":{postal:"MO",name:"Missouri",slug:null},

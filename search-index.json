@@ -140,6 +140,76 @@
     "desc": "Not automatic, Form 4 plus estimated payment required. Mich. Comp. Laws sect 206.311."
   },
   {
+    "title": "Alabama Tax Extension",
+    "url": "alabama-extension.html",
+    "desc": "Alabama automatic extension, no form, 6 months individual; federal + 1 month corporate. Ala. Code sect 40-18-27(c), sect 40-18-39(a)."
+  },
+  {
+    "title": "Arizona Tax Extension",
+    "url": "arizona-extension.html",
+    "desc": "Arizona 90% payment condition, 6 months individual, up to 7 corporate. A.R.S. sect 42-1107."
+  },
+  {
+    "title": "Arkansas Tax Extension",
+    "url": "arkansas-extension.html",
+    "desc": "Arkansas automatic with federal extension, 1 month beyond federal due date. Ark. Code Ann. sect 26-51-807."
+  },
+  {
+    "title": "Colorado Tax Extension",
+    "url": "colorado-extension.html",
+    "desc": "Colorado automatic, no form, 90% payment condition, 6 months. C.R.S. sect 39-22-608(2)."
+  },
+  {
+    "title": "Connecticut Tax Extension",
+    "url": "connecticut-extension.html",
+    "desc": "Connecticut Form CT-1040 EXT unless no tax owed with federal extension. Conn. Agencies Regs. sect 12-723-1."
+  },
+  {
+    "title": "Delaware Tax Extension",
+    "url": "delaware-extension.html",
+    "desc": "Delaware Form PIT-EXT required, not automatic, 6 months. 30 Del. C. sect 511."
+  },
+  {
+    "title": "Hawaii Tax Extension",
+    "url": "hawaii-extension.html",
+    "desc": "Hawaii automatic, no form, 6 months, properly estimated tax must be paid. Haw. Code R. sect 18-235-98."
+  },
+  {
+    "title": "Idaho Tax Extension",
+    "url": "idaho-extension.html",
+    "desc": "Idaho 80%/100% payment condition, 6 months, no form. Idaho Code sect 63-3033."
+  },
+  {
+    "title": "Indiana Tax Extension",
+    "url": "indiana-extension.html",
+    "desc": "Indiana automatic with federal extension, 90% payment rule. IC 6-8.1-6-1."
+  },
+  {
+    "title": "Iowa Tax Extension",
+    "url": "iowa-extension.html",
+    "desc": "Iowa automatic, no form, 90% payment condition, 6 months. Iowa Code sect 422.21."
+  },
+  {
+    "title": "Kansas Tax Extension",
+    "url": "kansas-extension.html",
+    "desc": "Kansas automatic with federal extension attached, 90% payment rule. K.S.A. sect 79-3221."
+  },
+  {
+    "title": "Kentucky Tax Extension",
+    "url": "kentucky-extension.html",
+    "desc": "Kentucky automatic with federal extension, 6 months (12 abroad). 103 KAR 15:050."
+  },
+  {
+    "title": "Louisiana Tax Extension",
+    "url": "louisiana-extension.html",
+    "desc": "Louisiana automatic, no form, 6 months. La. R.S. sect 47:103."
+  },
+  {
+    "title": "Maine Tax Extension",
+    "url": "maine-extension.html",
+    "desc": "Maine automatic with federal extension, equivalent period. 36 M.R.S. sect 5231."
+  },
+  {
     "title": "Master Extension Matrix",
     "url": "master-extension-matrix.html",
     "desc": "Sortable table of every jurisdiction and tax type."
