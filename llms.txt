@@ -14,18 +14,28 @@
 # tax types: individuals, C corps, S corps, partnerships, estates and trusts,
 # nonprofits, information returns, estate tax, excise.
 #
-# LAST UPDATED: 2026-09-22
-# BUILD STATUS: Federal section live. 5 states (CA, NY, TX, FL, IL) live. Remaining states, local, and matrix data in progress.
+# LAST UPDATED: 2026-09-23
+# BUILD STATUS: Federal section live. 15 states live (CA, NY, TX, FL, IL, PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI). Remaining states, local, and matrix data in progress.
 #
 # PAGES
 - index.html: Extension Guide home - entity-type router and core slogan.
 - federal-hub.html: Federal extensions hub - links to every federal extension form.
-- states-hub.html: State extensions hub - California, New York, Texas, Florida, Illinois live now.
+- states-hub.html: State extensions hub - 15 states live now.
 - california-extension.html: California individual and business extensions - both automatic. Cal. Code Regs. tit. 18 sect 18567; R&TC sect 18604.
 - new-york-extension.html: New York Form IT-370 individual and Form CT-5 corporate extensions. N.Y. Tax Law sect 657, sect 1085.
 - texas-extension.html: Texas franchise tax extension, Form 05-164, not automatic. No individual income tax in Texas. 34 Tex. Admin. Code sect 3.585.
 - florida-extension.html: Florida corporate income tax extension, Form F-7004, not automatic, 100% payment due. No individual income tax in Florida. Fla. Stat. sect 220.222.
 - illinois-extension.html: Illinois individual and corporate extensions - both automatic. 35 ILCS 5/505; 86 Ill. Admin. Code sect 100.5020.
+- pennsylvania-extension.html: Pennsylvania semi-automatic individual extension, REV-276 if tax owed. 61 Pa. Code sect 117.14.
+- new-jersey-extension.html: New Jersey Form NJ-630, not automatic, 80% payment condition. N.J.A.C. 18:35-6.1.
+- massachusetts-extension.html: Massachusetts Form M-4868, 80% payment condition for individuals/fiduciaries, partnerships automatic. M.G.L. c. 62C sect 19.
+- ohio-extension.html: Ohio fully automatic extension matching federal, no separate form. Ohio Rev. Code sect 5747.08.
+- washington-extension.html: Washington - no individual/corporate income tax; B&O excise extension discretionary/good-cause only. WAC 458-20-228.
+- oregon-extension.html: Oregon automatic with federal extension; corporations use federal Form 7004. Or. Rev. Stat. sect 314.385.
+- georgia-extension.html: Georgia automatic with federal extension; Form IT-303 otherwise. O.C.G.A. sect 48-7-57.
+- north-carolina-extension.html: North Carolina automatic with federal extension; Form D-410 otherwise, 90% payment rule. N.C. Gen. Stat. sect 105-263.
+- virginia-extension.html: Virginia automatic, no application, 90% payment rule to avoid penalty. Va. Code sect 58.1-344.
+- michigan-extension.html: Michigan not automatic, Form 4 plus estimated payment required. Mich. Comp. Laws sect 206.311.
 - federal-4868-individual-extension.html: Form 4868 individual extension - automatic 6 months, IRC 6081, Treas. Reg. 1.6081-4.
 - federal-7004-business-extension.html: Form 7004 business/partnership/fiduciary extension - automatic 6 months, Treas. Reg. 1.6081-3.
 - federal-8868-nonprofit-extension.html: Form 8868 exempt organization extension - automatic 6 months.

@@ -85,6 +85,56 @@
     "desc": "Individual and corporate extensions, both automatic. 35 ILCS 5/505; 86 Ill. Admin. Code sect 100.5020."
   },
   {
+    "title": "Pennsylvania Tax Extension",
+    "url": "pennsylvania-extension.html",
+    "desc": "Semi-automatic extension, REV-276 if tax owed. 61 Pa. Code sect 117.14."
+  },
+  {
+    "title": "New Jersey Tax Extension",
+    "url": "new-jersey-extension.html",
+    "desc": "Form NJ-630, not automatic, 80% payment condition. N.J.A.C. 18:35-6.1."
+  },
+  {
+    "title": "Massachusetts Tax Extension",
+    "url": "massachusetts-extension.html",
+    "desc": "Form M-4868, 80% payment condition for individuals/fiduciaries. M.G.L. c. 62C sect 19."
+  },
+  {
+    "title": "Ohio Tax Extension",
+    "url": "ohio-extension.html",
+    "desc": "Fully automatic, matches federal extension, no separate form. Ohio Rev. Code sect 5747.08."
+  },
+  {
+    "title": "Washington State Tax Extension",
+    "url": "washington-extension.html",
+    "desc": "No individual or corporate income tax. B&O excise extension is discretionary. WAC 458-20-228."
+  },
+  {
+    "title": "Oregon Tax Extension",
+    "url": "oregon-extension.html",
+    "desc": "Automatic with federal extension; corporations use federal Form 7004. Or. Rev. Stat. sect 314.385."
+  },
+  {
+    "title": "Georgia Tax Extension",
+    "url": "georgia-extension.html",
+    "desc": "Automatic with federal extension; Form IT-303 otherwise. O.C.G.A. sect 48-7-57."
+  },
+  {
+    "title": "North Carolina Tax Extension",
+    "url": "north-carolina-extension.html",
+    "desc": "Automatic with federal extension; Form D-410 otherwise, 90% payment rule. N.C. Gen. Stat. sect 105-263."
+  },
+  {
+    "title": "Virginia Tax Extension",
+    "url": "virginia-extension.html",
+    "desc": "Automatic, no application, 90% payment rule to avoid penalty. Va. Code sect 58.1-344."
+  },
+  {
+    "title": "Michigan Tax Extension",
+    "url": "michigan-extension.html",
+    "desc": "Not automatic, Form 4 plus estimated payment required. Mich. Comp. Laws sect 206.311."
+  },
+  {
     "title": "Master Extension Matrix",
     "url": "master-extension-matrix.html",
     "desc": "Sortable table of every jurisdiction and tax type."
