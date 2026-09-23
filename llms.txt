@@ -15,7 +15,7 @@
 # nonprofits, information returns, estate tax, excise.
 #
 # LAST UPDATED: 2026-09-23
-# BUILD STATUS: Federal section live. All 50 states + DC live. Puerto Rico live. 8 major city/local jurisdictions live (NYC, Philadelphia, Ohio municipalities, Michigan cities, Kansas City MO, St. Louis MO, Portland/Multnomah OR, San Francisco). Interactive US map live with every state, DC, Puerto Rico, and all 8 city/local pins clickable. Only excise and estate/inheritance edge cases remain.
+# BUILD STATUS: Federal section live. All 50 states + DC live. Puerto Rico live. 8 major city/local jurisdictions live (NYC, Philadelphia, Ohio municipalities, Michigan cities, Kansas City MO, St. Louis MO, Portland/Multnomah OR, San Francisco). Interactive US map live with every state, DC, Puerto Rico, and all 8 city/local pins clickable. State estate and inheritance tax extensions live (13 states + DC estate tax, 4 states inheritance tax; 2 open items flagged - see estate-inheritance-tax-extensions.html). Only excise tax edge cases remain unscoped.
 #
 # PAGES
 - index.html: Extension Guide home - entity-type router and core slogan.
@@ -92,6 +92,7 @@
 - efile-and-third-party-services.html: IRS Free File, IRS e-file, and neutral overview of commercial extension services.
 - extension-penalties-and-interest.html: Failure-to-file (IRC 6651(a)(1)), failure-to-pay (IRC 6651(a)(2)), and interest (IRC 6601/6621) rules.
 - resources.html: Curated official IRS resources (Free File, Direct Pay, EFTPS, Taxpayer Advocate Service) and IRS-authorized commercial e-file providers (TaxExtension.com, FileLater.com). No endorsements or affiliate relationships.
-- master-extension-matrix.html: Flagship sortable table of every jurisdiction and tax type. Federal, all 50 states + DC, Puerto Rico, and 8 city/local jurisdictions live; only excise and estate/inheritance edge cases remain.
+- estate-inheritance-tax-extensions.html: State-level estate tax extension rules for 13 states + DC and inheritance tax extension rules for 4 states, separate from the federal Form 4768 and from each state's income tax extension page. Gift tax extensions are federal-only (Form 4768); Kentucky and Nebraska are flagged as open items (no general filing-extension mechanism identified).
+- master-extension-matrix.html: Flagship sortable table of every jurisdiction and tax type. Federal, all 50 states + DC, Puerto Rico, 8 city/local jurisdictions, and state estate/inheritance tax extensions live; only excise tax edge cases remain unscoped.
 - faq.html: Common extension questions answered.
 - disclaimer.html: Site disclaimer and terms.

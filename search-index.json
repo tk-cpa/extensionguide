@@ -375,6 +375,11 @@
     "desc": "Official IRS resources (Free File, Direct Pay, EFTPS, Taxpayer Advocate Service) and IRS-authorized commercial e-file providers (TaxExtension.com, FileLater.com). No endorsements."
   },
   {
+    "title": "State Estate & Inheritance Tax Extensions",
+    "url": "estate-inheritance-tax-extensions.html",
+    "desc": "13 states + DC estate tax and 4 states inheritance tax extension rules - forms, automatic status, periods, and whether payment is also extended. Gift tax extensions are federal only."
+  },
+  {
     "title": "FAQ",
     "url": "faq.html",
     "desc": "Common extension questions answered."

@@ -1,6 +1,6 @@
 # Extension Guide - Session Handoff
 
-Last updated: 2026-09-23, end of T7 build session (adds resources.html, corrects the North Dakota citation, removes all "Verified [date]" text site-wide). Jurisdictional coverage remains: all 50 states + DC + Puerto Rico + 8 city/local jurisdictions live, only excise/estate edge cases remain unbuilt.
+Last updated: 2026-09-23, end of T8 build session (adds estate-inheritance-tax-extensions.html: 13 states + DC estate tax, 4 states inheritance tax, gift tax scoped as federal-only). Jurisdictional coverage: all 50 states + DC + Puerto Rico + 8 city/local jurisdictions + state estate/inheritance tax live. Only excise tax edge cases remain unscoped. Two open items are flagged within the estate/inheritance data itself (Kentucky, Nebraska - no general filing-extension mechanism located in primary sources checked) rather than rounded up to verified.
 
 ## What this is
 
@@ -73,11 +73,21 @@ This is a session-level/connector-level allowlist issue on Anthropic's proxy, no
 - Before any commit: run the lint gate (forbidden strings, em-dash, disclaimer link presence, canonical tag presence, div-tag balance, Map nav link) and curl-verify every external link returns 200 (curl 403/000 on a known-government/legal host is not automatically a break - confirm via WebFetch/WebSearch before concluding it's fine, and always chase down and fix an actual 404).
 - Filenames: `<state-name>-extension.html` lowercase with dashes for states; `<city-name>-extension.html` for local jurisdictions (consolidate a whole state's municipalities into one page when a single statewide statute governs them, as with Ohio and Michigan); `federal-<form>-<description>.html` for federal.
 
+## T8 additions (this session)
+
+- **estate-inheritance-tax-extensions.html** (NEW): one consolidated page covering state estate tax extensions for 13 states + DC (CT, HI, IL, ME, MD, MA, MN, NY, OR, RI, VT, WA, DC) and state inheritance tax extensions for 4 states (KY, NE, NJ, PA). Maryland has both taxes and appears in both tables. Gift tax extensions are scoped as federal-only (Form 4768/IRC sect 6081) - Connecticut is the only state with its own gift tax and its extension rides the same combined CT-706/709 EXT form as its estate tax.
+- **extensions-data.json**: grew from 75 to 92 records (17 new: 13 estate-tax states + DC, 4 inheritance-tax-only states).
+- **Two open items flagged, not fabricated**: Kentucky (KRS ch. 140) - no general filing-extension provision was located in the statute; only a deferred-payment election for certain future interests exists (KRS 140.210/140.220-140.224), which is not the same thing. Nebraska - inheritance tax is filed with the county court as part of probate, not via a Department of Revenue extension form; there is no formal filing extension, only a county-court penalty-abatement mechanism for good cause. Both are stated as open items on the page itself, not rounded up to "verified."
+- **Statute citations pinned to exact sections via primary source this session** (not carried over from memory): Conn. Gen. Stat. sect 12-392; Haw. Rev. Stat. sect 236E-9; 35 ILCS 405/6; 36 M.R.S. sect 4110; Md. Code Tax-Gen. sect 7-305.1; Minn. Stat. sect 289A.19 subd. 4; N.Y. Tax Law sect 976(a)(1); Or. Rev. Stat. sect 118.100; 32 V.S.A. sect 7481; RCW 83.100.050; D.C. Code sect 47-3705(b); Neb. Rev. Stat. sect 77-2010. Massachusetts, Rhode Island, New Jersey, Illinois, and Pennsylvania are cited to the governing chapter/regulation plus the agency form/instructions rather than one pinpoint subsection, because a live primary source naming the exact subsection was not found this session - this is disclosed, not glossed over.
+- Cross-linked from index.html, states-hub.html, and master-extension-matrix.html (build-status table, note-box, and a new stateTable row set per jurisdiction that renders automatically from extensions-data.json). Not added to the persistent top cat-nav, consistent with how every other individual content page (state pages, local-jurisdiction pages, federal form pages) is linked from hub pages rather than the top nav.
+- sitemap.xml, search-index.json, llms.txt all updated. File count: 78 HTML pages (up from 77).
+
 ## Next build queue
 
-1. **Excise, estate/inheritance edge cases** - not yet scoped. This is the only substantive content gap left on the site.
-2. **FAQ buildout** - faq.html exists (T1) but has not been revisited since; consider whether it needs new entries now that state, local, and Puerto Rico coverage is complete.
+1. **Excise tax edge cases** - not yet scoped. This is the only substantive content gap left on the site.
+2. **FAQ buildout** - faq.html exists (T1) but has not been revisited since; consider whether it needs new entries now that state, local, Puerto Rico, and estate/inheritance coverage is complete.
 3. Maintain a progress register tracking every jurisdiction x tax-type record's status (verified/drafted/live) - not yet built as a standalone file; could live as a project doc or a simple markdown table in the repo.
+4. If time allows, a second pass on Massachusetts, Rhode Island, New Jersey, Illinois, and Pennsylvania to pin the exact statutory subsection for each state's extension-granting authority (currently cited to the governing chapter/regulation plus the agency form).
 
 ## Delivery workflow until push is fixed
 
