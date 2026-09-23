@@ -91,6 +91,7 @@
 - how-to-paper-file-extension.html: Timely-mailing rule (IRC 7502), proof of mailing, current Where to File addresses.
 - efile-and-third-party-services.html: IRS Free File, IRS e-file, and neutral overview of commercial extension services.
 - extension-penalties-and-interest.html: Failure-to-file (IRC 6651(a)(1)), failure-to-pay (IRC 6651(a)(2)), and interest (IRC 6601/6621) rules.
+- resources.html: Curated official IRS resources (Free File, Direct Pay, EFTPS, Taxpayer Advocate Service) and IRS-authorized commercial e-file providers (TaxExtension.com, FileLater.com). No endorsements or affiliate relationships.
 - master-extension-matrix.html: Flagship sortable table of every jurisdiction and tax type. Federal, all 50 states + DC, Puerto Rico, and 8 city/local jurisdictions live; only excise and estate/inheritance edge cases remain.
 - faq.html: Common extension questions answered.
 - disclaimer.html: Site disclaimer and terms.

@@ -370,6 +370,11 @@
     "desc": "Sortable table of every jurisdiction and tax type."
   },
   {
+    "title": "Extension Resources",
+    "url": "resources.html",
+    "desc": "Official IRS resources (Free File, Direct Pay, EFTPS, Taxpayer Advocate Service) and IRS-authorized commercial e-file providers (TaxExtension.com, FileLater.com). No endorsements."
+  },
+  {
     "title": "FAQ",
     "url": "faq.html",
     "desc": "Common extension questions answered."
