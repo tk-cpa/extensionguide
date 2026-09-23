@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive US Tax Extension Map | Extension Guide</title>
-<meta name="description" content="Click any state for its individual and business tax filing extension rules. Every state, DC, and 8 major city/local jurisdictions are now live. Only Puerto Rico remains.">
+<meta name="description" content="Click any state for its individual and business tax filing extension rules. Every state, DC, Puerto Rico, and 8 major city/local jurisdictions are live - full US coverage.">
 <link rel="canonical" href="https://extensionguide.com/map.html">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -69,7 +69,7 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 </style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Interactive US Tax Extension Map | Extension Guide">
-<meta property="og:description" content="Click any state for its individual and business tax filing extension rules. Every state, DC, and 8 major city/local jurisdictions are now live. Only Puerto Rico remains.">
+<meta property="og:description" content="Click any state for its individual and business tax filing extension rules. Every state, DC, Puerto Rico, and 8 major city/local jurisdictions are live - full US coverage.">
 <meta property="og:url" content="https://extensionguide.com/map.html">
 <meta property="og:site_name" content="Extension Guide">
 <script type="application/ld+json">
@@ -97,15 +97,14 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 </div>
 <div class="ph"><div class="phi">
   <h1>Interactive US Tax Extension Map</h1>
-  <div class="sub">Click any coral state for its individual and business filing-extension rules. Solid coral city pins mark local/municipal taxes (New York City, Philadelphia, and others) that are now live too. Updated 9-23-2026.</div>
-  <div class="badges"><span class="badge">50 states + DC live</span><span class="badge">8 city/local jurisdictions live</span><span class="badge">Puerto Rico coming soon</span></div>
+  <div class="sub">Click any coral state for its individual and business filing-extension rules. Solid coral city pins mark local/municipal taxes (New York City, Philadelphia, and others) that are also live. Full coverage - every state, DC, Puerto Rico, and 8 city/local jurisdictions. Updated 9-23-2026.</div>
+  <div class="badges"><span class="badge">50 states + DC live</span><span class="badge">Puerto Rico live</span><span class="badge">8 city/local jurisdictions live</span></div>
 </div></div>
 <div class="back"><a href="states-hub.html">&#8592; State Extensions hub</a></div>
 
 <div class="wrap">
   <div class="legend">
     <div class="legend-item"><span class="legend-swatch" style="background:var(--coral-100,#FCE3E2);border-color:var(--coral-600,#E04A45)"></span> Live - click to open the state's guide</div>
-    <div class="legend-item"><span class="legend-swatch" style="background:var(--ink-10,#EDEEF0)"></span> Coming soon</div>
     <div class="legend-item"><span class="legend-dot" style="background:var(--coral,#F65F5A);border-radius:50%;border:2px solid var(--ink,#111)"></span> City / local tax jurisdiction - live, click to open</div>
   </div>
   <div class="map-wrap" id="map-wrap">
@@ -132,7 +131,7 @@ nav{display:flex!important;align-items:center!important;justify-content:space-be
 <div class="related">
   <div class="related-title">Related</div>
   <div class="related-links">
-    <a href="states-hub.html" class="related-link">State Extensions Hub<span>Full table of live and pending states</span></a>
+    <a href="states-hub.html" class="related-link">State Extensions Hub<span>Full table of every live state, DC, and Puerto Rico</span></a>
     <a href="master-extension-matrix.html" class="related-link">Master Matrix<span>Every jurisdiction, one sortable table</span></a>
   </div>
 </div>
@@ -179,7 +178,7 @@ const STATES = {
   "49":{postal:"UT",name:"Utah",slug:"utah-extension.html"},"50":{postal:"VT",name:"Vermont",slug:"vermont-extension.html"},
   "51":{postal:"VA",name:"Virginia",slug:"virginia-extension.html"},"53":{postal:"WA",name:"Washington",slug:"washington-extension.html"},
   "54":{postal:"WV",name:"West Virginia",slug:"west-virginia-extension.html"},"55":{postal:"WI",name:"Wisconsin",slug:"wisconsin-extension.html"},
-  "56":{postal:"WY",name:"Wyoming",slug:"wyoming-extension.html"},"72":{postal:"PR",name:"Puerto Rico",slug:null}
+  "56":{postal:"WY",name:"Wyoming",slug:"wyoming-extension.html"},"72":{postal:"PR",name:"Puerto Rico",slug:"puerto-rico-extension.html"}
 };
 
 const CITIES = [

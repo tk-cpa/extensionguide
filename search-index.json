@@ -360,6 +360,11 @@
     "desc": "Annual Business Tax Return extension request, not tied to federal extension, full payment due by original date."
   },
   {
+    "title": "Puerto Rico Tax Extension Guide",
+    "url": "puerto-rico-extension.html",
+    "desc": "Individual and business extensions both use Modelo SC 2644, automatic upon timely filing, typically 6 months. Payment not extended."
+  },
+  {
     "title": "Master Extension Matrix",
     "url": "master-extension-matrix.html",
     "desc": "Sortable table of every jurisdiction and tax type."

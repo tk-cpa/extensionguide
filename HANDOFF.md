@@ -1,6 +1,6 @@
 # Extension Guide - Session Handoff
 
-Last updated: 2026-09-23, end of T5 build session (all 50 states + DC + 8 city/local jurisdictions live).
+Last updated: 2026-09-23, end of T6 build session (all 50 states + DC + Puerto Rico + 8 city/local jurisdictions live - full US jurisdictional coverage, only excise/estate edge cases remain).
 
 ## What this is
 
@@ -26,13 +26,16 @@ Scope: comprehensive public reference on US federal, state, and local tax filing
 - `portland-multnomah-extension.html` - Portland/Multnomah County, OR combined business tax, Form EXT, 6 months, 90%/100% payment safe harbor. City of Portland/Multnomah County Revenue Division guidance.
 - `san-francisco-extension.html` - SF Annual Business Tax Return extension request, not tied to the federal extension, full payment due by the original date. SF Office of the Treasurer and Tax Collector guidance.
 
-`extensions-data.json` now has 73 records (Federal + 50 states/DC + 8 local jurisdictions, with New York City and Philadelphia each contributing 2 records for their split individual/business or BIRT/Wage regimes). `map.html`'s STATES object is fully populated (only Puerto Rico, FIPS "72", has `slug:null`); its CITIES array now carries a `slug` per city and the pins render solid coral and are clickable. states-hub.html, master-extension-matrix.html, index.html, llms.txt, search-index.json (75 entries), and sitemap.xml were all updated in the same batch.
+**T6 - Puerto Rico (live, this session):**
+- `puerto-rico-extension.html` - individuals and business entities both use the same form, Modelo SC 2644 ("Solicitud de Prorroga para Rendir la Planilla de Contribucion sobre Ingresos"), filed through SURI, automatic upon a timely request, typically 6 months, payment not extended. Authority: 13 L.P.R.A. Sec. 1061.03(c), 1061.06(c), 1061.07(c), 1061.09(b)(4), 1061.10(b)(2), 1061.16 (P.R. Internal Revenue Code), re-confirmed annually by a Carta Circular de Rentas Internas (CC RI 26-01 for tax year 2025). Note on the page itself: this covers the Puerto Rico Treasury (Hacienda) extension only, not federal filing questions for PR residents (IRC Sec. 933 and related), which are out of scope.
 
-**Corrected in-session (caught during verification, never shipped wrong):** New Hampshire's Interest & Dividends Tax was repealed effective for tax periods beginning 1-1-2025 (2024 was the last taxable year). `new-hampshire-extension.html` was rewritten to state this; only the Business Profits Tax (Form BT-EXT, N.H. Code Admin. R. Rev 307.09) still has an active extension mechanism there.
+`extensions-data.json` now has 75 records (Federal + 50 states/DC + 8 local jurisdictions + Puerto Rico, with New York City, Philadelphia, and Puerto Rico each contributing 2 records for split regimes/filer types). `map.html`'s STATES object is fully populated - every FIPS code including "72" (Puerto Rico) now has a real `slug`, so there are no `slug:null` entries left. Its CITIES array carries a `slug` per city and all pins (state and city) render live/clickable; the map's "coming soon" legend swatch and related stale copy were removed since nothing is pending except the excise/estate edge cases noted below. states-hub.html (added a Puerto Rico row to the "Live now" table), master-extension-matrix.html (build-status table), index.html, llms.txt, search-index.json (76 entries), and sitemap.xml were all updated in the same batch.
 
-**Only remaining gap:** Puerto Rico (map pin, state-hub row, and a dedicated page do not yet exist). Everything else - all 50 states, DC, and the 8 city/local jurisdictions the user asked for by name - is live.
+**Corrected in-session (T5, caught during verification, never shipped wrong):** New Hampshire's Interest & Dividends Tax was repealed effective for tax periods beginning 1-1-2025 (2024 was the last taxable year). `new-hampshire-extension.html` was rewritten to state this; only the Business Profits Tax (Form BT-EXT, N.H. Code Admin. R. Rev 307.09) still has an active extension mechanism there.
 
-**Quality gate**: all 75 HTML files pass lint (no em-dashes, no forbidden strings 109025/AC58472/P00646638/93250/Knyazev/"Prepared by", disclaimer link present, canonical tag present, balanced divs, Map nav link present). extensions-data.json, search-index.json validated as JSON; sitemap.xml validated as XML. All ~116 external URLs site-wide curl-verified this session; the handful that return 403/302/000 to curl (github.com, mtc.dor.state.ma.us, mypath.pa.gov, otr.cfo.dc.gov, tax.ri.gov, kcmo.gov, mass.gov, ny.gov, revenue.nh.gov, taxes.marylandtaxes.gov) were each independently confirmed real and on-topic via WebFetch or WebSearch - bot-blocked/egress-blocked, not broken. No genuine 404s remain unfixed as of this handoff.
+**Remaining gap (intentional, not an oversight):** excise tax and estate/inheritance edge cases have not been scoped or built. Every state, DC, Puerto Rico, and the 8 city/local jurisdictions the user asked for by name are live - this is genuinely full US jurisdictional coverage for the core individual/business income-tax extension use case.
+
+**Quality gate**: all 76 HTML files pass lint (no em-dashes, no forbidden strings 109025/AC58472/P00646638/93250/Knyazev/"Prepared by", disclaimer link present, canonical tag present, balanced divs, Map nav link present). extensions-data.json, search-index.json validated as JSON; sitemap.xml validated as XML. All ~118 external URLs site-wide curl-verified this session; the handful that return 403/302/000 to curl (github.com, mtc.dor.state.ma.us, mypath.pa.gov, otr.cfo.dc.gov, tax.ri.gov, kcmo.gov, mass.gov, ny.gov, revenue.nh.gov, taxes.marylandtaxes.gov) were each independently confirmed real and on-topic via WebFetch or WebSearch - bot-blocked/egress-blocked, not broken. No genuine 404s remain unfixed as of this handoff.
 
 ## BLOCKER: git push is not working
 
@@ -67,10 +70,9 @@ This is a session-level/connector-level allowlist issue on Anthropic's proxy, no
 
 ## Next build queue
 
-1. **Puerto Rico** - the one remaining pin on the map and row in the states hub. Needs its own primary-source research (PR Treasury Department / Departamento de Hacienda) before it can go live; do not fabricate a filing rule for it.
-2. **Excise, estate/inheritance edge cases** - not yet scoped.
-3. **FAQ buildout** - faq.html exists (T1) but has not been revisited since; consider whether it needs new entries now that state and local coverage is complete.
-4. Maintain a progress register tracking every jurisdiction x tax-type record's status (verified/drafted/live) - not yet built as a standalone file; could live as a project doc or a simple markdown table in the repo.
+1. **Excise, estate/inheritance edge cases** - not yet scoped. This is the only substantive content gap left on the site.
+2. **FAQ buildout** - faq.html exists (T1) but has not been revisited since; consider whether it needs new entries now that state, local, and Puerto Rico coverage is complete.
+3. Maintain a progress register tracking every jurisdiction x tax-type record's status (verified/drafted/live) - not yet built as a standalone file; could live as a project doc or a simple markdown table in the repo.
 
 ## Delivery workflow until push is fixed
 
