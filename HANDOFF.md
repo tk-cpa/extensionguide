@@ -1,6 +1,6 @@
 # Extension Guide - Session Handoff
 
-Last updated: 2026-09-22, end of T2 build session.
+Last updated: 2026-09-23, mid T2 build session (15 states live).
 
 ## What this is
 
@@ -14,9 +14,9 @@ Scope: comprehensive public reference on US federal, state, and local tax filing
 
 **T1 - Federal (live, committed, delivered):** index.html, disclaimer.html, faq.html, master-extension-matrix.html, federal-hub.html, and 5 federal form pages (4868, 7004, 8868, 4768, 8809), federal-special-situations.html, how-to-paper-file-extension.html, efile-and-third-party-services.html, extension-penalties-and-interest.html. Every federal form has a green-box with a direct PDF link + About-Form link, sourced from irs.gov this session.
 
-**T2 - States CA/NY/TX/FL/IL (built, committed, delivered as zip - NOT yet uploaded to GitHub, see blocker below):** california-extension.html, new-york-extension.html, texas-extension.html, florida-extension.html, illinois-extension.html, states-hub.html. Master matrix updated to render state rows live from extensions-data.json (now 14 records: 6 federal + 8 state). Nav (cat-nav) updated across all 20 HTML files to add a "States" link. sitemap.xml, llms.txt, search-index.json all updated with the 6 new pages.
+**T2 - 15 states live (built, committed, delivered as zip - NOT yet uploaded to GitHub, see blocker below):** california-extension.html, new-york-extension.html, texas-extension.html, florida-extension.html, illinois-extension.html, pennsylvania-extension.html, new-jersey-extension.html, massachusetts-extension.html, ohio-extension.html, washington-extension.html, oregon-extension.html, georgia-extension.html, north-carolina-extension.html, virginia-extension.html, michigan-extension.html, states-hub.html. Master matrix renders state rows live from extensions-data.json (now 25 records: Federal + 15 states). sitemap.xml, llms.txt, search-index.json all updated with all 15 state pages.
 
-Key facts verified this session for T2 (all authority citations verified against primary source 2026-09-22):
+Key facts verified this session for T2, first batch (CA/NY/TX/FL/IL - all authority citations verified against primary source 2026-09-22):
 - **California**: both individual and business extensions automatic, no application form. Individual: Cal. Code Regs. tit. 18 §18567, 6 months. Business: R&TC §18604, 7-month aggregate cap for corps/banks (6 months for S-corps/partnerships/LLCs).
 - **New York**: NOT automatic in the sense of "no form" - individual Form IT-370 (N.Y. Tax Law §657) and corporate Form CT-5 (N.Y. Tax Law §1085) both required, both must be filed by the original due date, CT-5 requires an estimated payment.
 - **Texas**: no individual income tax. Franchise tax only, Form 05-164, NOT automatic, 34 Tex. Admin. Code §3.585. First extension to Aug 17, 2026; second (EFT-mandated filers) to Nov 16, 2026. Payment threshold: 100% of prior year tax or 90% of current year tax.
@@ -24,12 +24,26 @@ Key facts verified this session for T2 (all authority citations verified against
 - **Illinois**: both individual and corporate extensions automatic, no application form. 35 ILCS 5/505; 86 Ill. Admin. Code §100.5020. Individual 6 months (matches longer federal extension if applicable), corporate 7 months (8 for June 30 fiscal year).
 - **Open item**: Illinois Form IL-505-B (corporate payment voucher) has no locatable current-year direct PDF on tax.illinois.gov as of this session - the page links to the Department's forms hub instead of a guessed/stale URL. Flagged on the page itself.
 
-**Quality gate**: all 20 HTML files pass lint (no em-dashes, no forbidden strings 109025/AC58472/P00646638/93250/Knyazev, disclaimer link present, canonical tag present, balanced divs). Every external link across all pages curl-verified at HTTP 200 as of this session (one broken Texas Webfile URL was found and fixed before delivery).
+Key facts verified this session for T2, second batch (PA/NJ/MA/OH/WA/OR/GA/NC/VA/MI - all authority citations verified against primary source 2026-09-23):
+- **Pennsylvania**: semi-automatic - if federal extension filed and no PA tax due, no PA form needed; otherwise Form REV-276, 61 Pa. Code §117.14, 6 months.
+- **New Jersey**: NOT automatic, Form NJ-630, 80% payment threshold or extension is void, N.J.A.C. 18:35-6.1, 6 months individual / 5.5 months fiduciary.
+- **Massachusetts**: individual/fiduciary conditional-automatic (80% payment threshold or void), Form M-4868/M-8736; partnerships fully automatic (Form 3). M.G.L. c. 62C §19; 830 CMR 62C.19.1.
+- **Ohio**: fully automatic, matches federal extension period exactly, no separate state form. Ohio Rev. Code §5747.08; Ohio Admin. Code §5703-7-05.
+- **Washington**: no individual or corporate income tax. B&O excise tax return extensions are discretionary/good-cause only (system failure, lost records, medical emergency, natural disaster - not financial hardship); deposit required beyond 30 days. Wash. Admin. Code §458-20-228(13).
+- **Oregon**: individual automatic with federal extension, no separate form; corporations use federal Form 7004 directly, extended due date 15 days after the federal one. Or. Rev. Stat. §314.385.
+- **Georgia**: automatic if federal extension attached (Form 4868/7004 or IRS confirmation letter); Form IT-303 otherwise. O.C.G.A. §48-7-57, up to 6 months.
+- **North Carolina**: automatic with federal extension (certify on the return); Form D-410 otherwise. 90% payment rule affects late-payment penalty only, not extension validity. N.C. Gen. Stat. §105-263.
+- **Virginia**: fully automatic, no application required at all (not even a copy of the federal extension). 90% payment rule under Va. Code §58.1-344. Original due date May 1 (later than federal), extended to Nov 1.
+- **Michigan**: NOT automatic - Form 4 or a copy of the federal extension, plus an estimated payment, required by the original due date. Mich. Comp. Laws §206.311.
+- **Fixed**: a dead nj.gov link (`extension.shtml`, 404) was replaced with the correct live page (`njit27.shtml`, "When to File and Pay") in both `new-jersey-extension.html` and `extensions-data.json`.
 
-**Local git state**: 2 commits ahead of what's actually live on GitHub -
+**Quality gate**: all HTML files pass lint (no em-dashes, no forbidden strings 109025/AC58472/P00646638/93250/Knyazev, disclaimer link present, canonical tag present, balanced divs). Every external link across all 15 state pages curl-verified (one broken Texas Webfile URL and one broken New Jersey URL were found and fixed before delivery). A few source pages (mass.gov, justia.com, ilga.gov) return 403/000 to automated curl but are confirmed readable via WebFetch - treated as bot-blocked, not broken, per established precedent; genuine 404s are always fixed.
+
+**Local git state**: 3 commits ahead of what's actually live on GitHub -
 - `7fad204` - T1 federal build
-- `b6a5db9` - T2 state build
-Both commits are clean, tested, and ready to push. They have NOT been pushed - see blocker below. The T1 content did make it to GitHub already via manual zip upload through GitHub's web UI (user did this once already, successfully). The T2 zip (`extensionguide-t2.zip`, delivered via SendUserFile) has NOT yet been manually uploaded by the user as of this handoff.
+- `b6a5db9` - T2 first batch (CA/NY/TX/FL/IL)
+- `20a3bbb` - T2 second batch (PA/NJ/MA/OH/WA/OR/GA/NC/VA/MI)
+All three commits are clean, tested, and ready to push. They have NOT been pushed - see blocker below (still unresolved, identical error, as of this session). The T1 content did make it to GitHub already via manual zip upload through GitHub's web UI (user did this once already, successfully). Nothing since T1 has been manually uploaded by the user as of this handoff - the T2 batches only exist in zips delivered via SendUserFile (`extensionguide-t2.zip`, `extensionguide-t2b.zip`).
 
 ## BLOCKER: git push is not working
 
@@ -74,12 +88,11 @@ User added the 4 required GitHub Pages A records at the registrar (GoDaddy) for 
 
 ## Next build queue (in priority order, per original plan)
 
-1. **T2 continuation**: Pennsylvania, New Jersey, Massachusetts, Ohio, Washington, Oregon, Georgia, North Carolina, Virginia, Michigan (next 10 high-volume states).
-2. **T3**: remaining states + DC.
-3. **T4**: city/local taxes - NYC, Philadelphia, Ohio RITA/CCA municipalities, Michigan cities, Kansas City, St. Louis, Portland/Multnomah County, San Francisco.
-4. **T5**: excise, estate/inheritance edge cases, FAQ buildout.
-5. **US states interactive map** (deferred until state pages exist, per user's explicit sequencing) - reference pattern is globaltaxguide.com/map.html: SVG `<object>` embed, region filter buttons with `data-region`, pin-chip links for small jurisdictions, CC BY-SA 3.0 base map credit.
-6. Maintain a progress register tracking every jurisdiction × tax-type record's status (verified/drafted/live) - not yet built as a standalone file, should be created (could live as a project doc or a simple markdown table in the repo).
+1. **T3**: remaining ~35 states + DC (15 states now live: CA, NY, TX, FL, IL, PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI).
+2. **T4**: city/local taxes - NYC, Philadelphia, Ohio RITA/CCA municipalities, Michigan cities, Kansas City, St. Louis, Portland/Multnomah County, San Francisco.
+3. **T5**: excise, estate/inheritance edge cases, FAQ buildout.
+4. **US states interactive map** - raised by the user mid-session as "what about the US map??" (this had been explicitly deferred until state pages existed). Not yet resolved with a firm decision: option (a) finish remaining states first, then build the map with full coverage; option (b) build the map now with the 15 live states linked and the rest shown as "coming soon" stubs. Reference pattern for the build itself is globaltaxguide.com/map.html: SVG `<object>` embed, region filter buttons with `data-region`, pin-chip links for small jurisdictions, CC BY-SA 3.0 base map credit. Whoever picks this up should get the user's call on timing before building.
+5. Maintain a progress register tracking every jurisdiction × tax-type record's status (verified/drafted/live) - not yet built as a standalone file, should be created (could live as a project doc or a simple markdown table in the repo).
 
 ## Delivery workflow until push is fixed
 

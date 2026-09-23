@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive US Tax Extension Map | Extension Guide</title>
+<meta name="description" content="Click any state for its individual and business tax filing extension rules. Coral states are live now; grey states and city pins are coming soon.">
+<link rel="canonical" href="https://extensionguide.com/map.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111111;--ink-80:#343A40;--ink-60:#5E6166;--ink-40:#9BA0A6;--ink-20:#D9DBDE;--ink-10:#EDEEF0;--paper:#FAFAF7;--white:#FFFFFF;--coral:#F65F5A;--coral-600:#E04A45;--coral-100:#FCE3E2;--green:#4A7459;--green-bg:#E2EDE6;--green-b:#9BBDAA;--amber:#8B6535;--amber-bg:#EDE8D8;--amber-b:#C8A878;--blue-acc:#4A6070;--blue-bg:#DDE4E8;--blue-b:#94AFBC;--red:#9B3D3D;--red-bg:#EDE0DC;--red-b:#C8A8A4;--font-display:'Oswald','Arial Narrow',sans-serif;--font-sans:'Inter',-apple-system,sans-serif;--font-mono:'Courier New',monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:60px}
+a{color:var(--coral);text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:14px 28px!important;border-bottom:1px solid var(--ink-20,#D9DBDE)!important;background:var(--paper,#FAFAF7)!important;position:sticky!important;top:0!important;z-index:100!important}
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--ink,#111111)}
+.wm{font-family:var(--font-display,'Oswald',sans-serif);font-weight:500;font-size:17px;letter-spacing:.05em;text-transform:uppercase;line-height:1.1;color:var(--ink,#111111)}
+.wm small{display:block;font-family:var(--font-sans,'Inter',sans-serif);font-weight:400;font-size:10px;color:var(--coral,#F65F5A);letter-spacing:.1em;margin-top:3px;text-transform:none!important}
+.nav-cta{display:inline-block!important;background:var(--coral,#F65F5A)!important;color:#fff!important;padding:9px 20px!important;font-family:var(--font-sans,'Inter',sans-serif)!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;letter-spacing:.03em!important;white-space:nowrap!important;flex-shrink:0!important}
+.nav-cta:hover{opacity:.88!important}
+.cat-nav{background:var(--ink,#111111);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-nav-inner{display:flex;min-width:max-content;padding:0 16px}
+.cat-nav a{display:inline-block;padding:10px 14px;font-family:var(--font-sans,'Inter',sans-serif);font-size:11.5px;font-weight:500;color:rgba(255,255,255,.55);text-decoration:none;letter-spacing:.04em;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.cat-nav a:hover,.cat-nav a.active{color:#fff!important;border-bottom-color:var(--coral,#F65F5A);text-decoration:none}
+@media(max-width:480px){nav{padding:12px 16px!important}.nav-cta{padding:8px 14px!important;font-size:12px!important}.cat-nav-inner{padding:0 8px}.cat-nav a{padding:9px 10px;font-size:11px}}
+.ph{background:var(--ink);padding:36px 0 28px;border-bottom:3px solid var(--coral)}
+.phi{max-width:1180px;margin:0 auto;padding:0 24px}
+.ph h1{font-family:var(--font-display);font-weight:500;font-size:clamp(24px,4vw,38px);color:#fff;line-height:1.1;margin-bottom:10px}
+.ph .sub{font-size:13px;color:rgba(255,255,255,.55);max-width:760px;line-height:1.6}
+.ph .badges{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.badge{font-family:var(--font-mono);font-size:10.5px;padding:3px 9px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12)}
+.back{max-width:1180px;margin:0 auto;padding:16px 24px 0}.back a{font-size:12px;color:var(--ink-60);font-weight:500}.back a:hover{color:var(--coral)}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 24px 0}
+.legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:14px;font-size:12.5px;color:var(--ink-80)}
+.legend-item{display:flex;align-items:center;gap:7px}
+.legend-swatch{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--ink-20)}
+.legend-dot{width:11px;height:11px;border-radius:50%;display:inline-block;border:2px solid var(--ink-60);background:#fff}
+.map-wrap{position:relative;border:1px solid var(--ink-20);border-radius:8px;background:#EEF0F0;overflow:hidden}
+#us-map{display:block;width:100%;height:auto}
+.state{fill:var(--ink-10);stroke:var(--paper);stroke-width:1px;cursor:default;transition:fill .12s linear}
+.state.live{fill:var(--coral-100);stroke:var(--coral-600);cursor:pointer}
+.state.live:hover{fill:var(--coral);stroke:var(--coral-600)}
+.state.pending:hover{fill:var(--ink-20)}
+.city-dot{fill:#fff;stroke:var(--blue-acc);stroke-width:2px;cursor:default}
+.city-dot:hover{fill:var(--blue-bg)}
+.map-tooltip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;font-weight:600;padding:7px 11px;border-radius:6px;transform:translate(-50%,-135%);white-space:nowrap;opacity:0;transition:opacity .08s;z-index:5;line-height:1.4}
+.map-tooltip .tt-sub{display:block;font-weight:400;font-size:11px;color:rgba(255,255,255,.65);margin-top:2px}
+.map-tooltip.show{opacity:1}
+.map-note{font-size:12px;color:var(--ink-60);margin-top:10px;line-height:1.6}
+.article{max-width:1180px;margin:0 auto;padding:28px 24px 0}
+.article h2{font-family:var(--font-display);font-size:18px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.article p{font-size:14px;line-height:1.7;color:var(--ink-80);margin-bottom:12px}
+.pin-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.pin-chip{font-size:12.5px;font-weight:500;color:var(--ink-60);border:1.5px dashed var(--ink-20);border-radius:999px;padding:6px 14px;background:var(--white)}
+.related{margin-top:32px;padding-top:20px;border-top:1px solid var(--ink-20)}
+.related-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-60);margin-bottom:12px}
+.related-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.related-link{display:block;padding:12px 14px;border:1px solid var(--ink-20);background:var(--white);font-size:13px;font-weight:600;color:var(--ink)}
+.related-link span{display:block;font-size:11.5px;font-weight:400;color:var(--ink-60);margin-top:3px}
+.related-link:hover{border-color:var(--coral);text-decoration:none}
+.source-row{font-size:11px;color:var(--ink-60);font-style:italic;line-height:1.6;padding:16px 0 0;border-top:1px solid var(--ink-20);margin-top:24px}
+.disc{font-size:11px;color:var(--ink-40);line-height:1.6;margin-top:14px}
+@media(max-width:700px){.related-links{grid-template-columns:1fr}}
+@media print{button{display:none!important}nav{display:none!important}.cat-nav{display:none!important}}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Interactive US Tax Extension Map | Extension Guide">
+<meta property="og:description" content="Click any state for its individual and business tax filing extension rules. Coral states are live now; grey states and city pins are coming soon.">
+<meta property="og:url" content="https://extensionguide.com/map.html">
+<meta property="og:site_name" content="Extension Guide">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Interactive US Tax Extension Map","url":"https://extensionguide.com/map.html","isPartOf":{"@type":"WebSite","name":"Extension Guide","url":"https://extensionguide.com"},"isAccessibleForFree":true,"inLanguage":"en-US"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="brand">
+    <div class="wm">Extension Guide<small style="text-transform:none!important">a tk.cpa resource</small></div>
+  </a>
+  <a href="https://tk.cpa" target="_blank" rel="noopener" class="nav-cta">tk.cpa</a>
+</nav>
+<div class="cat-nav" role="navigation" aria-label="Sections">
+  <div class="cat-nav-inner">
+    <a href="index.html">Home</a>
+    <a href="federal-hub.html">Federal</a>
+    <a href="states-hub.html">States</a>
+    <a href="map.html" class="active">Map</a>
+    <a href="master-extension-matrix.html">Master Matrix</a>
+    <a href="extension-penalties-and-interest.html">Penalties &amp; Interest</a>
+    <a href="faq.html">FAQ</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+</div>
+<div class="ph"><div class="phi">
+  <h1>Interactive US Tax Extension Map</h1>
+  <div class="sub">Click any coral state for its individual and business filing-extension rules. Hollow city pins mark local/municipal taxes (New York City, Philadelphia, and others) that are next in the build queue. Updated 9-23-2026.</div>
+  <div class="badges"><span class="badge">15 states live</span><span class="badge">35 states + DC coming soon</span><span class="badge">8 city/local jurisdictions coming soon</span></div>
+</div></div>
+<div class="back"><a href="states-hub.html">&#8592; State Extensions hub</a></div>
+
+<div class="wrap">
+  <div class="legend">
+    <div class="legend-item"><span class="legend-swatch" style="background:var(--coral-100,#FCE3E2);border-color:var(--coral-600,#E04A45)"></span> Live - click to open the state's guide</div>
+    <div class="legend-item"><span class="legend-swatch" style="background:var(--ink-10,#EDEEF0)"></span> Coming soon</div>
+    <div class="legend-item"><span class="legend-dot"></span> City / local tax jurisdiction - coming soon</div>
+  </div>
+  <div class="map-wrap" id="map-wrap">
+    <svg id="us-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="map-tooltip" id="map-tooltip"></div>
+  </div>
+  <p class="map-note">Base geometry: US Census Bureau state boundaries via the <a href="https://github.com/topojson/us-atlas" target="_blank" rel="noopener">us-atlas</a> public-domain TopoJSON, rendered client-side with <a href="https://d3js.org" target="_blank" rel="noopener">D3.js</a>. Alaska and Hawaii are shown at reduced scale via the standard Albers USA composite projection, not geographically true position.</p>
+</div>
+
+<div class="article">
+<h2>City and local tax jurisdictions (coming soon)</h2>
+<p>These localities impose their own income, wage, or earnings taxes independent of the state, each with its own extension rules. They are pinned on the map above as hollow markers and will go live in a future build session, in this order:</p>
+<div class="pin-grid">
+  <span class="pin-chip">New York City</span>
+  <span class="pin-chip">Philadelphia</span>
+  <span class="pin-chip">Ohio RITA / CCA municipalities</span>
+  <span class="pin-chip">Michigan cities</span>
+  <span class="pin-chip">Kansas City, MO</span>
+  <span class="pin-chip">St. Louis, MO</span>
+  <span class="pin-chip">Portland / Multnomah County, OR</span>
+  <span class="pin-chip">San Francisco, CA</span>
+</div>
+
+<div class="related">
+  <div class="related-title">Related</div>
+  <div class="related-links">
+    <a href="states-hub.html" class="related-link">State Extensions Hub<span>Full table of live and pending states</span></a>
+    <a href="master-extension-matrix.html" class="related-link">Master Matrix<span>Every jurisdiction, one sortable table</span></a>
+  </div>
+</div>
+
+<div class="source-row">State boundary data: US Census Bureau (public domain) via us-atlas. Live/pending status reflects this site's own build state as of 9-23-2026 - see the master matrix for the authoritative per-jurisdiction list.</div>
+<button onclick="window.print()" style="background:var(--coral,#F65F5A);color:#fff;border:none;padding:11px 24px;font-family:var(--font-sans,'Inter',sans-serif);font-size:13px;font-weight:600;cursor:pointer;margin:20px 0 4px;letter-spacing:.03em;display:inline-block">Print / Save as PDF</button>
+<div class="disc">This page is for informational purposes only and is not legal, tax, or accounting advice. No professional relationship is created by using this site. <a href="disclaimer.html">Full disclaimer.</a></div>
+</div>
+
+<div style="background:var(--ink,#111);border-top:2px solid var(--coral,#F65F5A);margin-top:60px;padding:16px 0">
+  <div style="max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <span style="font-family:var(--font-mono,'Courier New',monospace);font-size:11px;color:rgba(255,255,255,.38);letter-spacing:.08em">a tk.cpa resource</span>
+    <a href="https://tk.cpa" target="_blank" rel="noopener" style="font-family:var(--font-sans,'Inter',sans-serif);font-size:12px;font-weight:600;color:var(--coral,#F65F5A);text-decoration:none;letter-spacing:.03em">tk.cpa</a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script>
+// FIPS state code -> {postal, slug, name}. Slug is null for jurisdictions not yet live.
+const STATES = {
+  "01":{postal:"AL",name:"Alabama",slug:null},"02":{postal:"AK",name:"Alaska",slug:null},
+  "04":{postal:"AZ",name:"Arizona",slug:null},"05":{postal:"AR",name:"Arkansas",slug:null},
+  "06":{postal:"CA",name:"California",slug:"california-extension.html"},"08":{postal:"CO",name:"Colorado",slug:null},
+  "09":{postal:"CT",name:"Connecticut",slug:null},"10":{postal:"DE",name:"Delaware",slug:null},
+  "11":{postal:"DC",name:"District of Columbia",slug:null},"12":{postal:"FL",name:"Florida",slug:"florida-extension.html"},
+  "13":{postal:"GA",name:"Georgia",slug:"georgia-extension.html"},"15":{postal:"HI",name:"Hawaii",slug:null},
+  "16":{postal:"ID",name:"Idaho",slug:null},"17":{postal:"IL",name:"Illinois",slug:"illinois-extension.html"},
+  "18":{postal:"IN",name:"Indiana",slug:null},"19":{postal:"IA",name:"Iowa",slug:null},
+  "20":{postal:"KS",name:"Kansas",slug:null},"21":{postal:"KY",name:"Kentucky",slug:null},
+  "22":{postal:"LA",name:"Louisiana",slug:null},"23":{postal:"ME",name:"Maine",slug:null},
+  "24":{postal:"MD",name:"Maryland",slug:null},"25":{postal:"MA",name:"Massachusetts",slug:"massachusetts-extension.html"},
+  "26":{postal:"MI",name:"Michigan",slug:"michigan-extension.html"},"27":{postal:"MN",name:"Minnesota",slug:null},
+  "28":{postal:"MS",name:"Mississippi",slug:null},"29":{postal:"MO",name:"Missouri",slug:null},
+  "30":{postal:"MT",name:"Montana",slug:null},"31":{postal:"NE",name:"Nebraska",slug:null},
+  "32":{postal:"NV",name:"Nevada",slug:null},"33":{postal:"NH",name:"New Hampshire",slug:null},
+  "34":{postal:"NJ",name:"New Jersey",slug:"new-jersey-extension.html"},"35":{postal:"NM",name:"New Mexico",slug:null},
+  "36":{postal:"NY",name:"New York",slug:"new-york-extension.html"},"37":{postal:"NC",name:"North Carolina",slug:"north-carolina-extension.html"},
+  "38":{postal:"ND",name:"North Dakota",slug:null},"39":{postal:"OH",name:"Ohio",slug:"ohio-extension.html"},
+  "40":{postal:"OK",name:"Oklahoma",slug:null},"41":{postal:"OR",name:"Oregon",slug:"oregon-extension.html"},
+  "42":{postal:"PA",name:"Pennsylvania",slug:"pennsylvania-extension.html"},"44":{postal:"RI",name:"Rhode Island",slug:null},
+  "45":{postal:"SC",name:"South Carolina",slug:null},"46":{postal:"SD",name:"South Dakota",slug:null},
+  "47":{postal:"TN",name:"Tennessee",slug:null},"48":{postal:"TX",name:"Texas",slug:"texas-extension.html"},
+  "49":{postal:"UT",name:"Utah",slug:null},"50":{postal:"VT",name:"Vermont",slug:null},
+  "51":{postal:"VA",name:"Virginia",slug:"virginia-extension.html"},"53":{postal:"WA",name:"Washington",slug:"washington-extension.html"},
+  "54":{postal:"WV",name:"West Virginia",slug:null},"55":{postal:"WI",name:"Wisconsin",slug:null},
+  "56":{postal:"WY",name:"Wyoming",slug:null},"72":{postal:"PR",name:"Puerto Rico",slug:null}
+};
+
+const CITIES = [
+  {name:"New York City", sub:"NYC earnings/nonresident tax - coming soon", lon:-74.0060, lat:40.7128},
+  {name:"Philadelphia", sub:"Wage/BIRT extensions - coming soon", lon:-75.1652, lat:39.9526},
+  {name:"Ohio RITA / CCA municipalities", sub:"Municipal net profits tax - coming soon", lon:-81.6944, lat:41.4993},
+  {name:"Michigan cities (Detroit and others)", sub:"City income tax extensions - coming soon", lon:-83.0458, lat:42.3314},
+  {name:"Kansas City, MO", sub:"Earnings tax extensions - coming soon", lon:-94.5786, lat:39.0997},
+  {name:"St. Louis, MO", sub:"Earnings tax extensions - coming soon", lon:-90.1994, lat:38.6270},
+  {name:"Portland / Multnomah County, OR", sub:"Metro/county tax extensions - coming soon", lon:-122.6784, lat:45.5152},
+  {name:"San Francisco, CA", sub:"Business tax extensions - coming soon", lon:-122.4194, lat:37.7749}
+];
+
+const width = 960, height = 600;
+const svg = d3.select("#us-map").attr("viewBox", "0 0 " + width + " " + height);
+const projection = d3.geoAlbersUsa().scale(1250).translate([width/2, height/2]);
+const path = d3.geoPath().projection(projection);
+const tooltip = document.getElementById("map-tooltip");
+const wrap = document.getElementById("map-wrap");
+
+function showTip(html, evt) {
+  tooltip.innerHTML = html;
+  tooltip.classList.add("show");
+  const rect = wrap.getBoundingClientRect();
+  tooltip.style.left = (evt.clientX - rect.left) + "px";
+  tooltip.style.top = (evt.clientY - rect.top) + "px";
+}
+function hideTip() { tooltip.classList.remove("show"); }
+
+fetch("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
+  .then(r => r.json())
+  .then(us => {
+    const statesGeo = topojson.feature(us, us.objects.states).features;
+    svg.selectAll("path.state")
+      .data(statesGeo)
+      .enter()
+      .append("path")
+      .attr("class", d => {
+        const info = STATES[d.id];
+        return "state " + (info && info.slug ? "live" : "pending");
+      })
+      .attr("d", path)
+      .on("mousemove", function(evt, d) {
+        const info = STATES[d.id];
+        if (!info) return;
+        const status = info.slug ? "Live - click to open" : "Coming soon";
+        showTip(info.name + '<span class="tt-sub">' + status + '</span>', evt);
+      })
+      .on("mouseleave", hideTip)
+      .on("click", function(evt, d) {
+        const info = STATES[d.id];
+        if (info && info.slug) window.location.href = info.slug;
+      });
+
+    // City pins, drawn after states so they sit on top.
+    const cityLayer = svg.append("g").attr("class", "city-layer");
+    cityLayer.selectAll("circle.city-dot")
+      .data(CITIES)
+      .enter()
+      .append("circle")
+      .attr("class", "city-dot")
+      .attr("r", 6)
+      .attr("cx", d => { const p = projection([d.lon, d.lat]); return p ? p[0] : -100; })
+      .attr("cy", d => { const p = projection([d.lon, d.lat]); return p ? p[1] : -100; })
+      .on("mousemove", function(evt, d) {
+        showTip(d.name + '<span class="tt-sub">' + d.sub + '</span>', evt);
+      })
+      .on("mouseleave", hideTip);
+  })
+  .catch(function(err) {
+    document.getElementById("map-wrap").innerHTML = '<p style="padding:24px;font-size:13px;color:var(--ink-60)">Map data could not be loaded. See the <a href="states-hub.html">State Extensions hub</a> for the full state list.</p>';
+  });
+</script>
+</body>
+</html>

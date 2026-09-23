@@ -60,6 +60,11 @@
     "desc": "State-by-state extension rules. California, New York, Texas, Florida, Illinois live now."
   },
   {
+    "title": "Interactive US Tax Extension Map",
+    "url": "map.html",
+    "desc": "Click any state for its extension rules. 15 states live, remaining states and 8 city/local jurisdictions coming soon."
+  },
+  {
     "title": "California Tax Extension",
     "url": "california-extension.html",
     "desc": "Individual and business extensions, both automatic. Cal. Code Regs. tit. 18 sect 18567; R&TC sect 18604."

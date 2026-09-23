@@ -15,12 +15,13 @@
 # nonprofits, information returns, estate tax, excise.
 #
 # LAST UPDATED: 2026-09-23
-# BUILD STATUS: Federal section live. 15 states live (CA, NY, TX, FL, IL, PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI). Remaining states, local, and matrix data in progress.
+# BUILD STATUS: Federal section live. 15 states live (CA, NY, TX, FL, IL, PA, NJ, MA, OH, WA, OR, GA, NC, VA, MI). Interactive US map live (15 states clickable, 35 states + DC and 8 city/local jurisdictions marked coming soon). Remaining states and local coverage in progress.
 #
 # PAGES
 - index.html: Extension Guide home - entity-type router and core slogan.
 - federal-hub.html: Federal extensions hub - links to every federal extension form.
 - states-hub.html: State extensions hub - 15 states live now.
+- map.html: Interactive US extension map - click any live state; city/local pins (NYC, Philadelphia, and others) marked coming soon.
 - california-extension.html: California individual and business extensions - both automatic. Cal. Code Regs. tit. 18 sect 18567; R&TC sect 18604.
 - new-york-extension.html: New York Form IT-370 individual and Form CT-5 corporate extensions. N.Y. Tax Law sect 657, sect 1085.
 - texas-extension.html: Texas franchise tax extension, Form 05-164, not automatic. No individual income tax in Texas. 34 Tex. Admin. Code sect 3.585.
