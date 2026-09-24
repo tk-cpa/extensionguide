@@ -2791,5 +2791,24 @@
     "authority": "City of Birmingham Occupational Tax Code, Ordinance No. 97-184, Article I, Section 6",
     "source_url": "http://www.zillionforms.com/2007/I4106533.PDF",
     "verified_as_of": "2026-09-23"
+  },
+  {
+    "jurisdiction": "Guam",
+    "tax_type": "Income tax",
+    "filer": "Individuals (bona fide residents)",
+    "form": "Form 4868",
+    "form_name": "Application for Automatic Extension of Time To File U.S. Individual Income Tax Return",
+    "automatic": true,
+    "federal_extension_honored": false,
+    "payment_triggered_only": false,
+    "length": "Guam is a full mirror-code territory (48 U.S.C. sect 1421i(a)-(b)): the U.S. Internal Revenue Code is made applicable in Guam as the Guam Territorial income tax, substituting Guam for the United States and the Governor for the Secretary of the Treasury. Under this substitution the same Form 4868 automatic 6-month extension mechanics apply, filed with Guam's Department of Revenue and Taxation instead of the IRS - consistent with the IRS's own Form 4868 filing instructions, which direct permanent residents of Guam (grouped with the USVI) away from an IRS mailing address to Publication 570. This is a reasonable inference from the mirror-code statute, not a Guam-issued bulletin naming Form 4868 - no standalone extension procedure page was found on guamtax.com or myguamtax.com this session.",
+    "payment_threshold": "N/A",
+    "efile_url": "https://www.guamtax.com/",
+    "form_pdf_url": "https://www.irs.gov/pub/irs-pdf/p570.pdf",
+    "about_form_url": "https://www.irs.gov/pub/irs-pdf/p570.pdf",
+    "paper_address_source_url": "",
+    "authority": "48 U.S.C. sect 1421i(a)-(b); IRS Publication 570 (reasonable inference, not independently confirmed against a Guam-issued source)",
+    "source_url": "https://www.law.cornell.edu/uscode/text/48/1421i",
+    "verified_as_of": "2026-09-24"
   }
 ]
