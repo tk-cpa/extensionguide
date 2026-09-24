@@ -346,6 +346,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://extensionguide.com/us-territories-extension.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://extensionguide.com/map.html</loc>
     <lastmod>2026-09-23</lastmod>
     <priority>0.8</priority>
@@ -389,6 +394,26 @@
     <loc>https://extensionguide.com/international-information-returns-extension.html</loc>
     <lastmod>2026-09-23</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://extensionguide.com/state-pte-elective-tax-extension.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://extensionguide.com/iowa-school-district-surtax-extension.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://extensionguide.com/oregon-transit-self-employment-tax-extension.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://extensionguide.com/alabama-municipal-occupational-tax-extension.html</loc>
+    <lastmod>2026-09-23</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://extensionguide.com/federal-special-situations.html</loc>

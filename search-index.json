@@ -405,6 +405,11 @@
     "desc": "Individual and business extensions both use Modelo SC 2644, automatic upon timely filing, typically 6 months. Payment not extended."
   },
   {
+    "title": "US Territories Tax Extension Guide",
+    "url": "us-territories-extension.html",
+    "desc": "US Virgin Islands (paper Form 4868 filed with VI Bureau of Internal Revenue) and CNMI (dual-track mirror-code income tax plus 3 local taxes) confirmed. Guam and American Samoa disclosed as not yet independently confirmed this session."
+  },
+  {
     "title": "Master Extension Matrix",
     "url": "master-extension-matrix.html",
     "desc": "Sortable table of every jurisdiction and tax type."
@@ -443,5 +448,25 @@
     "title": "Other Extensions - Payroll Tax and FBAR",
     "url": "other-extensions.html",
     "desc": "Federal payroll tax (Forms 941, 940) has no extension mechanism. FBAR (FinCEN 114) gets an automatic extension to October 15."
+  },
+  {
+    "title": "State PTE Elective Tax (PTET) Extensions",
+    "url": "state-pte-elective-tax-extension.html",
+    "desc": "How PTET/BAIT extensions work in California, New York, New Jersey, Connecticut, and Illinois - some states need a separate PTET extension application, others ride on the entity own return. Partial survey of the highest-volume PTET states."
+  },
+  {
+    "title": "Iowa School District / EMS Surtax Extension",
+    "url": "iowa-school-district-surtax-extension.html",
+    "desc": "Iowa school district and EMS surtax have no separate return or extension - computed on IA 1040 line 19 and covered by the state automatic 90%-payment extension."
+  },
+  {
+    "title": "Oregon TriMet & Lane Transit District Self-Employment Tax Extension",
+    "url": "oregon-transit-self-employment-tax-extension.html",
+    "desc": "Form OR-TM has no separate extension form - it automatically follows a federal or Oregon individual income tax extension, though payment is still due by the original date."
+  },
+  {
+    "title": "Alabama Municipal Occupational Tax Extension",
+    "url": "alabama-municipal-occupational-tax-extension.html",
+    "desc": "No statewide statute - each Alabama city ordinance controls. Birmingham confirmed: a discretionary 30-day extension only, interest and penalty still accrue. Other AL cities disclosed as unconfirmed."
   }
 ]
