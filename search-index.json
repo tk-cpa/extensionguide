@@ -35,6 +35,16 @@
     "desc": "Automatic 30-day extension for W-2, 1099, 1098, 1095 and other information returns. W-2 not automatic."
   },
   {
+    "title": "Form 5558 Employee Benefit Plan Extension",
+    "url": "federal-5558-employee-plan-extension.html",
+    "desc": "One-time extension for Form 5500 series and Form 8955-SSA - automatic to the 15th day of the 3rd month after the normal due date if filed on or before that date. IRC sect 6081."
+  },
+  {
+    "title": "International Information Returns Extension Guide",
+    "url": "international-information-returns-extension.html",
+    "desc": "Forms 3520, 5471, 5472, 8621, 8854, 8865, and 8938 ride on the filer's own income tax return extension with no separate form. Form 3520-A is the exception - it requires its own Form 7004 filed under the foreign trust's own EIN, separate from the U.S. owner's own extension."
+  },
+  {
     "title": "Special Situations",
     "url": "federal-special-situations.html",
     "desc": "Taxpayers abroad, Form 2350, combat zone relief, disaster postponements."
@@ -330,6 +340,36 @@
     "desc": "BIRT/NPT extension automatic, tied to federal extension, no separate city form. Wage Tax has no individual extension mechanism."
   },
   {
+    "title": "Pennsylvania Local Earned Income Tax (Act 32) Extension Guide",
+    "url": "pennsylvania-local-eit-extension.html",
+    "desc": "No statutory extension provision exists anywhere in the Local Tax Enabling Act or its implementing regulation. Tax collection districts grant a filing extension as administrative practice only, tied to the federal/state extension."
+  },
+  {
+    "title": "Kentucky Local Occupational License Tax Extension Guide",
+    "url": "kentucky-local-occupational-tax-extension.html",
+    "desc": "No statewide extension statute - roughly 200 Kentucky cities, counties, and school districts each set their own ordinance. Sampled ordinances show a common federal-extension-matching pattern, disclosed as a sample, not an exhaustive survey."
+  },
+  {
+    "title": "Denver Occupational Privilege Tax Extension Guide",
+    "url": "denver-opt-extension.html",
+    "desc": "No extension mechanism exists for Denver's flat per-employee OPT - confirmed by direct text search of Denver's general tax booklet and every relevant Tax Guide topic."
+  },
+  {
+    "title": "Wilmington, Delaware Local Tax Extension Guide",
+    "url": "wilmington-de-extension.html",
+    "desc": "City of Wilmington Net Profits Tax (Form WCWT-6) honors the federal extension - a copy of the IRS extension must be filed with the Earned Income Tax Division by the original due date. Payment not extended; 5 percent one-time penalty plus 1.5 percent monthly interest on unpaid balances."
+  },
+  {
+    "title": "Maryland County Local Income Tax Extension Guide",
+    "url": "maryland-county-local-tax-extension.html",
+    "desc": "Maryland's 23 counties and Baltimore City do not administer a separate local income tax return or extension - local tax is computed on the same Form 502 as state tax, under the same automatic 6-month extension. Confirmed against Md. Code Ann., Tax-Gen. sect 10-823."
+  },
+  {
+    "title": "Colorado Other Cities OPT Extension Guide",
+    "url": "colorado-other-cities-opt-extension.html",
+    "desc": "Aurora, Greenwood Village, Sheridan, and Glendale Occupational Privilege Tax - no extension mechanism found in any primary source checked for any of the four, matching Denver's OPT finding."
+  },
+  {
     "title": "Ohio Municipalities Tax Extension Guide",
     "url": "ohio-municipal-extension.html",
     "desc": "Covers all ~600 Ohio municipalities (RITA, CCA, self-administered) under one statewide statute, Ohio Rev. Code sect 718.05(G)(2)."
@@ -388,5 +428,20 @@
     "title": "Disclaimer",
     "url": "disclaimer.html",
     "desc": "Site disclaimer and terms."
+  },
+  {
+    "title": "Federal Excise Tax Extensions",
+    "url": "excise-tax-extension.html",
+    "desc": "Form 720 and Form 2290 have no extension of time to file mechanism - confirmed against the Form 7004 eligible-forms table and each form current IRS instructions."
+  },
+  {
+    "title": "State Sales & Use Tax Extensions",
+    "url": "sales-and-use-tax-extension.html",
+    "desc": "Does a state grant a sales tax filing extension? 9 states checked against primary sources - 8 have no general extension, Washington is the one confirmed exception."
+  },
+  {
+    "title": "Other Extensions - Payroll Tax and FBAR",
+    "url": "other-extensions.html",
+    "desc": "Federal payroll tax (Forms 941, 940) has no extension mechanism. FBAR (FinCEN 114) gets an automatic extension to October 15."
   }
 ]

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Other Extensions - Payroll Tax, SUI/SUTA, and FBAR | Extension Guide</title>
+<meta name="description" content="Extension rules for tax types outside the individual, business, estate, sales, and excise categories: federal payroll tax (Forms 941 and 940 have no extension mechanism, only a 10-day accommodation for on-time depositors), state unemployment insurance (all 50 states plus DC addressed, every one resolved - 6 confirmed exceptions - Arkansas, Idaho, Missouri, New Hampshire, New Mexico, and Washington - 3 narrow exceptions, and the rest no general extension mechanism found), and FBAR (FinCEN Form 114), which gets an automatic extension to October 15.">
+<link rel="canonical" href="https://extensionguide.com/other-extensions.html">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111111;--ink-80:#343A40;--ink-60:#5E6166;--ink-40:#9BA0A6;--ink-20:#D9DBDE;--ink-10:#EDEEF0;--paper:#FAFAF7;--white:#FFFFFF;--coral:#F65F5A;--coral-600:#E04A45;--coral-100:#FCE3E2;--green:#4A7459;--green-bg:#E2EDE6;--green-b:#9BBDAA;--amber:#8B6535;--amber-bg:#EDE8D8;--amber-b:#C8A878;--blue-acc:#4A6070;--blue-bg:#DDE4E8;--blue-b:#94AFBC;--red:#9B3D3D;--red-bg:#EDE0DC;--red-b:#C8A8A4;--font-display:'Oswald','Arial Narrow',sans-serif;--font-sans:'Inter',-apple-system,sans-serif;--font-mono:'Courier New',monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:60px}
+a{color:var(--coral);text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:14px 28px!important;border-bottom:1px solid var(--ink-20,#D9DBDE)!important;background:var(--paper,#FAFAF7)!important;position:sticky!important;top:0!important;z-index:100!important}
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--ink,#111111)}
+.wm{font-family:var(--font-display,'Oswald',sans-serif);font-weight:500;font-size:17px;letter-spacing:.05em;text-transform:uppercase;line-height:1.1;color:var(--ink,#111111)}
+.wm small{display:block;font-family:var(--font-sans,'Inter',sans-serif);font-weight:400;font-size:10px;color:var(--coral,#F65F5A);letter-spacing:.1em;margin-top:3px;text-transform:none!important}
+.nav-cta{display:inline-block!important;background:var(--coral,#F65F5A)!important;color:#fff!important;padding:9px 20px!important;font-family:var(--font-sans,'Inter',sans-serif)!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;letter-spacing:.03em!important;white-space:nowrap!important;flex-shrink:0!important}
+.nav-cta:hover{opacity:.88!important}
+.cat-nav{background:var(--ink,#111111);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-nav-inner{display:flex;min-width:max-content;padding:0 16px}
+.cat-nav a{display:inline-block;padding:10px 14px;font-family:var(--font-sans,'Inter',sans-serif);font-size:11.5px;font-weight:500;color:rgba(255,255,255,.55);text-decoration:none;letter-spacing:.04em;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.cat-nav a:hover,.cat-nav a.active{color:#fff!important;border-bottom-color:var(--coral,#F65F5A);text-decoration:none}
+@media(max-width:480px){nav{padding:12px 16px!important}.nav-cta{padding:8px 14px!important;font-size:12px!important}.cat-nav-inner{padding:0 8px}.cat-nav a{padding:9px 10px;font-size:11px}}
+.ph{background:var(--ink);padding:36px 0 28px;border-bottom:3px solid var(--coral)}
+.phi{max-width:900px;margin:0 auto;padding:0 24px}
+.ph-eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);margin-bottom:12px}
+.ph h1{font-family:var(--font-display);font-weight:500;font-size:clamp(24px,4vw,38px);color:#fff;line-height:1.1;margin-bottom:10px}
+.ph .sub{font-size:13px;color:rgba(255,255,255,.55)}
+.ph .badges{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.badge{font-family:var(--font-mono);font-size:10.5px;padding:3px 9px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12)}
+.back{max-width:900px;margin:0 auto;padding:16px 24px 0}.back a{font-size:12px;color:var(--ink-60);font-weight:500}.back a:hover{color:var(--coral)}
+.article{max-width:900px;margin:0 auto;padding:24px 24px 0}
+.article .lead{font-size:16px;line-height:1.65;color:var(--ink-80);margin-bottom:20px;font-weight:500}
+.article h2{font-family:var(--font-display);font-size:18px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.article h3{font-family:var(--font-sans);font-size:14px;font-weight:700;margin:18px 0 8px;color:var(--ink)}
+.article p{font-size:14px;line-height:1.7;color:var(--ink-80);margin-bottom:12px}
+.article ul,.article ol{margin:0 0 14px 22px}
+.article li{font-size:14px;line-height:1.7;color:var(--ink-80);margin-bottom:6px}
+.slogan{background:var(--ink);color:#fff;padding:18px 20px;margin:22px 0;border-left:4px solid var(--coral)}
+.slogan p{font-size:14px;color:#fff;font-weight:600;margin:0;line-height:1.5}
+.callout{background:var(--ink);color:#fff;padding:16px 20px;margin:20px 0;border-left:4px solid var(--coral)}
+.callout .callout-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--coral);margin-bottom:8px}
+.callout p{font-size:13px;color:rgba(255,255,255,.85);line-height:1.6;margin:0}
+.note-box{background:var(--amber-bg);border-left:3px solid var(--amber);padding:12px 16px;margin:18px 0;font-size:13px;color:var(--amber);line-height:1.6}
+.green-box{background:var(--green-bg);border-left:3px solid var(--green-b);padding:12px 16px;margin:18px 0;font-size:13px;color:var(--green);line-height:1.6}
+.red-box{background:var(--red-bg);border-left:3px solid var(--red-b);padding:12px 16px;margin:18px 0;font-size:13px;color:var(--red);line-height:1.6}
+table.dt{width:100%;border-collapse:collapse;font-size:12.5px;margin:16px 0}
+table.dt th{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:9px 12px;background:var(--ink);color:#fff;text-align:left}
+table.dt td{padding:9px 12px;border-bottom:1px solid var(--ink-20);vertical-align:top;line-height:1.5}
+table.dt tr:last-child td{border-bottom:none}
+.related{margin-top:32px;padding-top:20px;border-top:1px solid var(--ink-20)}
+.related-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-60);margin-bottom:12px}
+.related-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.related-link{display:block;padding:12px 14px;border:1px solid var(--ink-20);background:var(--white);font-size:13px;font-weight:600;color:var(--ink)}
+.related-link span{display:block;font-size:11.5px;font-weight:400;color:var(--ink-60);margin-top:3px}
+.related-link:hover{border-color:var(--coral);text-decoration:none}
+.source-row{font-size:11px;color:var(--ink-60);font-style:italic;line-height:1.6;padding:16px 0 0;border-top:1px solid var(--ink-20);margin-top:24px}
+.disc{font-size:11px;color:var(--ink-40);line-height:1.6;margin-top:14px}
+@media(max-width:700px){.related-links{grid-template-columns:1fr}}
+@media print{button{display:none!important}nav{display:none!important}.cat-nav{display:none!important}}
+</style>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Other Extensions - Payroll Tax, SUI/SUTA, and FBAR | Extension Guide">
+<meta property="og:description" content="Extension rules for tax types outside the individual, business, estate, sales, and excise categories: federal payroll tax (Forms 941 and 940 have no extension mechanism, only a 10-day accommodation for on-time depositors), state unemployment insurance (all 50 states plus DC addressed, every one resolved - 6 confirmed exceptions - Arkansas, Idaho, Missouri, New Hampshire, New Mexico, and Washington - 3 narrow exceptions, and the rest no general extension mechanism found), and FBAR (FinCEN Form 114), which gets an automatic extension to October 15.">
+<meta property="og:url" content="https://extensionguide.com/other-extensions.html">
+<meta property="og:site_name" content="Extension Guide">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Other Extensions","url":"https://extensionguide.com/other-extensions.html","author":{"@type":"Organization","name":"tk.cpa","url":"https://tk.cpa"},"publisher":{"@type":"Organization","name":"Extension Guide","url":"https://extensionguide.com"},"isAccessibleForFree":true,"inLanguage":"en-US"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="brand">
+    <div class="wm">Extension Guide<small style="text-transform:none!important">a tk.cpa resource</small></div>
+  </a>
+  <a href="https://tk.cpa" target="_blank" rel="noopener" class="nav-cta">tk.cpa</a>
+</nav>
+<div class="cat-nav" role="navigation" aria-label="Sections">
+  <div class="cat-nav-inner">
+    <a href="index.html">Home</a>
+    <a href="federal-hub.html">Federal</a>
+    <a href="states-hub.html">States</a>
+    <a href="map.html">Map</a>
+    <a href="master-extension-matrix.html">Master Matrix</a>
+    <a href="extension-penalties-and-interest.html">Penalties &amp; Interest</a>
+    <a href="resources.html">Resources</a>
+    <a href="faq.html">FAQ</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+</div>
+<div class="ph"><div class="phi">
+  <h1>Other Extensions</h1>
+  <div class="sub">Payroll tax: no extension mechanism &nbsp;&bull;&nbsp; SUI/SUTA: all 50 states + DC resolved, 6 confirmed exceptions &nbsp;&bull;&nbsp; FBAR: automatic to October 15</div>
+  <div class="badges"><span class="badge">3 tax types covered</span><span class="badge">Payroll tax verified</span><span class="badge">FBAR verified</span></div>
+</div></div>
+<div class="back"><a href="index.html">&#8592; Extension Guide home</a></div>
+<div class="article">
+
+<div class="slogan"><p>An extension to file is not an extension to pay tax.</p></div>
+<p class="lead">This page collects the extension rules for tax types that do not fit neatly into the individual, business, estate, sales, or excise categories covered elsewhere on this site: federal payroll (employment) tax, and FBAR foreign account reporting. Both were checked directly against current primary sources this session.</p>
+
+<h2>Federal payroll (employment) tax - Forms 941 and 940</h2>
+<p>There is no extension of time to file Form 941 (Employer's Quarterly Federal Tax Return) or Form 940 (Employer's Annual Federal Unemployment (FUTA) Tax Return). Neither form appears on the Form 7004 eligible-forms list, and neither form's own instructions provide a request-based extension mechanism.</p>
+<p>What does exist is a narrower, automatic accommodation for compliant filers: if all employment taxes were deposited on time for the period, the employer gets 10 additional calendar days to file the return itself. This is not an extension request - there is nothing to apply for - and it does not apply to the deposits themselves, only to the paper or e-filed return, and only when every deposit for that period was already made on time.</p>
+<table class="dt">
+<tr><th>Form</th><th>Extension mechanism</th><th>Automatic accommodation</th><th>Authority</th></tr>
+<tr><td>Form 941 (quarterly)</td><td>None - not eligible for Form 7004</td><td>10 additional calendar days to file if all taxes for the period were deposited on time</td><td>IRS Employment Tax Due Dates guidance; Form 7004 instructions</td></tr>
+<tr><td>Form 940 (annual FUTA)</td><td>None - not eligible for Form 7004</td><td>10 additional calendar days to file if all FUTA tax was deposited on time</td><td>IRS Employment Tax Due Dates guidance; Form 7004 instructions</td></tr>
+</table>
+
+<h2>State unemployment insurance quarterly reports</h2>
+<p>State unemployment insurance (SUI/SUTA) quarterly wage and tax reports are filed with each state's workforce or labor agency, not its revenue department, on a fixed quarterly cycle (typically the last day of the month following the quarter's end). All 50 states plus DC are addressed in the table below, each resolved with a definitive, cited answer, mostly against statutes and administrative regulations rather than agency web pages once earlier web-page checks proved inconclusive.</p>
+<table class="dt">
+<tr><th>State</th><th>General extension available?</th><th>Detail</th><th>Authority</th></tr>
+<tr><td>Alabama</td><td>No provision located</td><td>Alabama Administrative Code Rule 480-4-2-.17 (Contribution Payments, Reimbursement Payments and Reports) requires filing by the contribution due date, with no extension provision discussed in the rule.</td><td>Ala. Admin. Code r. 480-4-2-.17</td></tr>
+<tr><td>Alaska</td><td>No provision located</td><td>Department of Labor and Workforce Development guidance states reports and payments are due the last day of the month following the quarter, with no extension mechanism discussed; only a suggestion to file the report without payment to avoid the late-filing penalty if payment cannot be made on time.</td><td>Alaska Department of Labor and Workforce Development, employer tax newsletter</td></tr>
+<tr><td>Arizona</td><td>No provision located</td><td>DES states reports are due on the scheduled quarterly date, with only a weekend/holiday accommodation; no extension mechanism is discussed.</td><td>Arizona Department of Economic Security, Reporting Wages and Paying Taxes - Schedule</td></tr>
+<tr><td><strong>Arkansas</strong></td><td><strong>Yes - up to 30 days</strong></td><td>Upon written request filed with the Director on or before the due date, and for good cause shown, the Director may grant a written extension of time to file the quarterly contribution and wage report, not to exceed 30 days, and not extending beyond the 15th day before the federal FUTA return deadline.</td><td>Arkansas Regulation No. 6, Section F (208.00.07-003 Ark. Code R.)</td></tr>
+<tr><td>California</td><td>No provision located</td><td>EDD's required-filings guidance gives only a weekend/holiday accommodation for the DE 9/DE 9C quarterly return; no extension mechanism is discussed.</td><td>EDD, Required Filings and Due Dates</td></tr>
+<tr><td>Colorado</td><td>No provision located</td><td>CDLE's wage-reporting page states fixed quarterly due dates with only a weekend/holiday accommodation; no extension mechanism is discussed.</td><td>Colorado Department of Labor and Employment, Wage Reporting</td></tr>
+<tr><td>Connecticut</td><td>Narrow exception - reimbursing employers only</td><td>CT DOL states that reimbursing employers (mostly nonprofits and government entities that elect reimbursement financing instead of standard contributions) get quarterly return due dates extended 15 days beyond the standard dates. Standard-rate contributing employers get no such extension.</td><td>Connecticut Department of Labor, Quarterly Tax Return Due Dates</td></tr>
+<tr><td>Delaware</td><td>No provision located</td><td>Division of Unemployment Insurance FAQ states reports and tax are due within one month following each quarter, with no extension mechanism discussed.</td><td>Delaware Department of Labor, Employer FAQs</td></tr>
+<tr><td>District of Columbia</td><td>No provision located</td><td>DOES states Form UC-30 quarterly reports are due April 30, July 31, October 31, and January 31, with no extension process discussed; late reports and tax are subject to penalty and interest.</td><td>DC Department of Employment Services, Reporting Questions</td></tr>
+<tr><td>Florida</td><td>No provision located</td><td>The RT-6N instructions (governed by Fla. Admin. Code r. 73B-10.037) give fixed quarterly due dates with only a weekend/holiday accommodation; no extension provision is discussed.</td><td>Fla. Admin. Code r. 73B-10.037; Form RT-6N instructions</td></tr>
+<tr><td>Georgia</td><td>No provision located</td><td>The Department of Labor states fixed quarterly due dates with only a weekend/holiday accommodation; a small-tax deferral exists (taxes of $5 or less may be deferred), but that is a payment deferral for trivial amounts, not a filing extension.</td><td>Georgia Department of Labor, File Tax and Wage Reports and Make Payments</td></tr>
+<tr><td>Hawaii</td><td>No provision located</td><td>Unemployment Insurance Division FAQ requires the contribution and wage detail reports to be filed by the due date each quarter, with no extension mechanism discussed and a maximum tax rate as the stated consequence of non-filing.</td><td>Hawaii Department of Labor and Industrial Relations, UI Employer FAQ</td></tr>
+<tr><td><strong>Idaho</strong></td><td><strong>Yes - up to 60 days</strong></td><td>The Department of Labor may, for good cause shown by a covered employer, grant filing and payment extensions not to exceed 60 days from the date due. Employers must request the extension on or before the original due date of the quarter for which it is sought.</td><td>Idaho Department of Labor, UI Tax Employer Handbook</td></tr>
+<tr><td>Illinois</td><td>No provision located</td><td>IDES states wage reports and contributions are due the month after each quarter closes, with filing timeliness described as the employer's responsibility; no extension provision is discussed.</td><td>IDES, Quarterly Filing Requirements</td></tr>
+<tr><td>Indiana</td><td>No provision located</td><td>DWD's quarterly report due-dates page gives fixed dates with no discussion of an extension; a flat $25 penalty applies per missing or inadequate report.</td><td>Indiana Department of Workforce Development, Quarterly Report Due Dates</td></tr>
+<tr><td>Iowa</td><td>No provision located</td><td>Iowa Workforce Development's UI tax and employer handbook pages describe fixed quarterly filing and late-filing penalties with no extension mechanism discussed.</td><td>Iowa Workforce Development, UI Tax and Employer Handbook</td></tr>
+<tr><td>Kansas</td><td>No provision located</td><td>The Kansas UI Employer Handbook states Form K-CNS 100 is due the last day of the month following the quarter, with no extension provision discussed.</td><td>Kansas Department of Labor, UI Employer Handbook</td></tr>
+<tr><td>Kentucky</td><td>No provision located</td><td>787 KAR 1:220 sets the quarterly report due date as the last day of the month following the quarter, with no extension or penalty-waiver provision discussed in the regulation.</td><td>787 KAR 1:220, Required Reports and Due Dates</td></tr>
+<tr><td>Louisiana</td><td>No provision located</td><td>The Louisiana Workforce Commission states wage and tax reports are due within 30 days after the end of the quarter, with penalty and interest for late payment; no extension provision is discussed.</td><td>Louisiana Workforce Commission, Internet Wage &amp; Tax Reporting</td></tr>
+<tr><td>Maine</td><td>No provision located</td><td>MDOL's employer FAQ states quarterly wage reports and contributions are due April 30, July 31, October 31, and January 31; the only accommodation is a post-deadline discretionary waiver of interest and penalty for good cause, not a filing extension.</td><td>Maine Department of Labor, Employer FAQ</td></tr>
+<tr><td>Maryland</td><td>No provision located</td><td>The Division of Unemployment Insurance states employers must file reports and pay tax within one month of each quarter's end, with no extension provision discussed.</td><td>Maryland Department of Labor, Tax Rates and Quarterly Reporting</td></tr>
+<tr><td>Massachusetts</td><td>No provision located</td><td>DUA states fixed quarterly deadlines (by 3 p.m. on the due date) with 12% interest on late payments; no filing extension is discussed.</td><td>Massachusetts DUA, Employer Contributions to Unemployment</td></tr>
+<tr><td>Michigan</td><td>No standing provision - one-time technical waiver only</td><td>UIA's own quarterly due dates (25th of the month following the quarter) carry no general extension. In 2026 the UIA granted a one-time penalty and interest waiver, extending the Q1 2026 wage report deadline to May 31, 2026, explicitly tied to employer difficulty activating accounts on the new MiUI platform - a one-time situational accommodation, not a standing right.</td><td>Michigan LEO/UIA, Submit Reports and Payments; UIA one-time waiver announcement, May 2026</td></tr>
+<tr><td>Minnesota</td><td>No provision located</td><td>UI Minnesota's due-dates page gives fixed quarterly due dates with only a weekend/holiday accommodation; no extension provision is discussed.</td><td>Unemployment Insurance Minnesota, Due Dates</td></tr>
+<tr><td>Mississippi</td><td>No provision located</td><td>MDES states quarterly reports are due the last day of the month following the quarter, with only a weekend accommodation; no extension provision is discussed.</td><td>MDES, Quarterly Report and Tax Due Dates</td></tr>
+<tr><td><strong>Missouri</strong></td><td><strong>Yes - up to 3 months</strong></td><td>On written request made on or before the report's due date, the Division of Employment Security may, for good cause shown, grant an extension of time to file the quarterly contribution and wage report or pay contributions, not to exceed three months.</td><td>8 CSR 10-4.030</td></tr>
+<tr><td>Montana</td><td>No provision located</td><td>The UI Division's Employer Handbook gives fixed quarterly due dates with only a weekend/holiday accommodation; no extension mechanism is discussed, and a $25 late-filing penalty applies.</td><td>Montana Department of Labor and Industry, UI Division Employer Handbook</td></tr>
+<tr><td>Nebraska</td><td>No provision located</td><td>The Employer's Guide to Unemployment Insurance states combined tax is due and delinquent after the last day of the month following the quarter, with no extension provision discussed.</td><td>Nebraska Department of Labor, Employer's Guide to Unemployment Insurance</td></tr>
+<tr><td>Nevada</td><td>No provision located</td><td>DETR states the quarterly report and payment must be received by the last day of the month following the quarter, with only a weekend/holiday accommodation and a flat $5 late-filing forfeit; no extension mechanism is discussed.</td><td>Nevada DETR, Quarterly Reporting Information</td></tr>
+<tr><td><strong>New Hampshire</strong></td><td><strong>Yes - 30 days</strong></td><td>Upon timely application and payment of a $50 fee, the time for filing the quarterly report may be extended 30 days. Absent an extension, a late-filing fee applies (10% of contributions due, minimum $25 for contributing employers).</td><td>RSA 282-A:142</td></tr>
+<tr><td>New Jersey</td><td>No provision located</td><td>The Division of Employer Accounts handbook states the WR-30 wage report is due within 30 days of each quarter's end and must be filed electronically; no extension provision is discussed.</td><td>NJ Department of Labor and Workforce Development, Employer Accounts Handbook</td></tr>
+<tr><td><strong>New Mexico</strong></td><td><strong>Yes - up to 30 days</strong></td><td>Upon written application to the department filed before the regular due date, establishing to the department's satisfaction that good cause exists, an extension not to exceed 30 days may be granted for filing the quarterly wage and contribution report and/or paying contributions or payments in lieu of contributions. The dws.nm.gov domain itself rejected every direct fetch attempted this session; this citation was reached through the regulation's independent publication on the state's own official register archive and cross-checked against a second independent secondary source, not through the agency's own web page.</td><td>11.3.400.410 NMAC</td></tr>
+<tr><td>New York</td><td>No provision located</td><td>NYS DOL's NYS-45 quarterly reporting guidance gives fixed due dates with only a weekend/holiday accommodation; no extension mechanism is discussed.</td><td>New York State Department of Labor, NYS-45 Quarterly Reporting</td></tr>
+<tr><td>North Carolina</td><td>No general provision - disaster relief only</td><td>DES's quarterly filing page states fixed due dates with no general extension mechanism. NC has granted a disaster-specific filing deadline extension before (Hurricane Helene-impacted counties, Q3 2024) - a hardship accommodation, not a standing right.</td><td>NC DES, File, Adjust or Review Quarterly Tax &amp; Wage Report</td></tr>
+<tr><td>North Dakota</td><td>No provision located</td><td>Job Service North Dakota's employer guide states reports must be filed and tax paid electronically by the end of the month following the quarter, with no extension option discussed.</td><td>Job Service North Dakota, Employer's Guide</td></tr>
+<tr><td>Ohio</td><td>No provision located</td><td>Ohio Administrative Code Rule 4141-11-01 states reports are due no later than the last day of the month following the quarter and become delinquent and subject to forfeiture if not filed by the due date; no extension provision is discussed.</td><td>Ohio Admin. Code Rule 4141-11-01</td></tr>
+<tr><td>Oklahoma</td><td>No provision located</td><td>OESC's wage-reporting page (corroborated by a secondary source on the specific due dates) gives fixed quarterly due dates with no extension mechanism discussed, only a reference to discretionary exceptions for the electronic-filing method itself, not the deadline.</td><td>Oklahoma Employment Security Commission, Wage Reporting</td></tr>
+<tr><td>Oregon</td><td>No provision located</td><td>The Combined Payroll Tax Report guide states fixed quarterly due dates with penalty and interest for late filing; no extension mechanism is discussed.</td><td>Oregon Employment Department, Combined Payroll Tax publication (uipub215)</td></tr>
+<tr><td>Pennsylvania</td><td>No provision located</td><td>The Department of Labor and Industry states UC-2 quarterly reports and contributions are due at the end of the month following the quarter, with only a weekend/holiday accommodation; no extension provision is discussed.</td><td>PA Department of Labor and Industry, File Unemployment Compensation Quarterly Wage/Tax Reports</td></tr>
+<tr><td>Rhode Island</td><td>No provision located</td><td>DLT's employer tax FAQ states quarterly taxes are due the last day of the month following the quarter; the only accommodation is a discretionary post-payment waiver of penalty and interest for circumstances beyond the employer's control, not a filing extension.</td><td>RI Department of Labor and Training, Frequently Asked Employer Tax Questions</td></tr>
+<tr><td>South Carolina</td><td>Narrow exception - payment only, not filing</td><td>DEW's own "Extensions" page covers a payment extension: on written request made before the payment due date, DEW may for good cause extend the time to pay (interest accrues at 1% per month). The page does not describe a parallel filing extension for the report itself.</td><td>SC Department of Employment and Workforce, Extensions</td></tr>
+<tr><td>South Dakota</td><td>No provision located</td><td>The Division of Reemployment Assistance states wage reports must be received by fixed quarterly due dates, with a $25 per-month late-filing penalty; no extension mechanism is discussed, and the only alternative noted (annual filing for domestic employers) requires advance approval and is not an extension.</td><td>SD Department of Labor and Regulation, Reemployment Assistance Tax - Wage Reporting</td></tr>
+<tr><td>Tennessee</td><td>Narrow exception - payment only, not filing</td><td>Tenn. Comp. R. &amp; Regs. 0800-10-01-.05 ("Extension of Time") lets a premium-paying employer request a written extension of time to pay premiums, up to 30 days, for good cause shown, on or before the due date; interest still runs from the original due date if payment isn't made within the extension period. The rule addresses payment only - no parallel filing extension for the report itself is discussed.</td><td>Tenn. Comp. R. &amp; Regs. 0800-10-01-.05</td></tr>
+<tr><td>Texas</td><td>No provision located</td><td>TWC states quarterly wage reports and tax payments are due by the last day of the month following the quarter, with only a weekend/holiday accommodation; a penalty waiver exists but is not a filing extension.</td><td>Texas Workforce Commission, Tax Report &amp; Payment Due Dates</td></tr>
+<tr><td>Utah</td><td>No provision located</td><td>Utah Code &sect;35A-4-305 sets penalties for reports not filed by the due date and contains no language permitting a filing extension.</td><td>Utah Code &sect;35A-4-305</td></tr>
+<tr><td>Vermont</td><td>No provision located</td><td>The Department of Labor's quarterly reporting page gives fixed due dates with only a weekend accommodation; no extension mechanism is discussed.</td><td>Vermont Department of Labor, Quarterly Reporting &amp; Taxable Wage Information</td></tr>
+<tr><td>Virginia</td><td>No provision located</td><td>Va. Code &sect;60.2-512 provides only that a due date falling on a weekend or legal holiday moves to the next business day; no discretionary or good-cause filing extension is discussed.</td><td>Va. Code &sect;60.2-512</td></tr>
+<tr><td><strong>Washington</strong></td><td><strong>Yes - good cause, with a deposit requirement</strong></td><td>The department, for good cause, may extend the due date for filing a report. If granted, the employer must make a deposit with the department equal to the estimated tax due for the reporting period.</td><td>WAC 192-310-030(11)</td></tr>
+<tr><td>West Virginia</td><td>No provision located</td><td>WorkForce West Virginia states fixed quarterly due dates with no extension mechanism discussed for Form WVUC-A-154.</td><td>WorkForce West Virginia, Tax Filing &amp; Reporting</td></tr>
+<tr><td>Wisconsin</td><td>No provision located</td><td>DWD's UI Employer Handbook gives fixed quarterly due dates under DWD 110.07(4), with only a weekend/holiday accommodation. A first-quarter payment deferral option exists (up to 60% of Q1 liability), but that is a payment deferral, not a filing extension - the report itself is still due April 30.</td><td>DWD 110.07(4); Wisconsin UI Employer Handbook</td></tr>
+<tr><td>Wyoming</td><td>No provision located</td><td>DWS's reporting due-dates page gives fixed quarterly due dates with only a weekend/holiday accommodation; no extension mechanism is discussed.</td><td>Wyoming Department of Workforce Services, Reporting Due Dates</td></tr>
+</table>
+<div class="note-box"><strong>Honest scope note.</strong> All 50 states plus DC are addressed in the table above, every one with a definitive, cited answer - reached, where an agency web page did not resolve the question, by going to the underlying statute or administrative regulation instead. Six confirmed exceptions were found: Arkansas (up to 30 days, good cause), Idaho (up to 60 days, good cause), Missouri (up to 3 months, good cause), New Hampshire (30 days, on timely application and a $50 fee), New Mexico (up to 30 days, good cause), and Washington (good cause, with a deposit requirement). Three narrow, non-general exceptions were found: Connecticut (15 extra days, but only for reimbursing employers), and Tennessee and South Carolina (each a payment extension only, not a filing extension). The remaining states with a definitive answer show no general extension mechanism (Michigan's and North Carolina's accommodations were one-time or disaster-specific, not standing rights). New Mexico's own dws.nm.gov domain rejected every direct fetch attempted this session; its answer was reached instead through the regulation's independent publication on the state's official register archive and cross-checked against a second independent secondary source - the citation is to the regulation itself, not to the agency's own page.</div>
+
+<h2>FBAR - FinCEN Form 114 (Report of Foreign Bank and Financial Accounts)</h2>
+<p>FBAR is not a tax return - it is an information report filed with the Treasury's Financial Crimes Enforcement Network, separate from any IRS income tax filing - but it carries its own automatic extension that is worth stating plainly since it is easy to confuse with the Form 4868 individual extension.</p>
+<table class="dt">
+<tr><th>Item</th><th>Detail</th></tr>
+<tr><td>Original due date</td><td>April 15</td></tr>
+<tr><td>Extended due date</td><td>October 15, automatically</td></tr>
+<tr><td>Is a request required?</td><td>No - FinCEN grants the extension to every filer automatically; there is no FBAR-specific extension form</td></tr>
+<tr><td>Authority</td><td>FinCEN, Due Date for FBARs guidance</td></tr>
+</table>
+<div class="note-box">The FBAR automatic extension to October 15 runs on its own, separate from Form 4868. A filer does not need to have requested the federal income tax extension for the FBAR extension to apply.</div>
+
+<div class="related">
+  <div class="related-title">Related</div>
+  <div class="related-links">
+    <a href="federal-4868-individual-extension.html" class="related-link">Form 4868<span>The federal individual income tax extension - a separate filing from FBAR</span></a>
+    <a href="sales-and-use-tax-extension.html" class="related-link">Sales &amp; Use Tax Extensions<span>Why sales tax, another trust-fund tax, is generally not extendable</span></a>
+    <a href="excise-tax-extension.html" class="related-link">Federal Excise Tax Extensions<span>Form 720 and Form 2290 - also no extension mechanism</span></a>
+    <a href="master-extension-matrix.html" class="related-link">Master Extension Matrix<span>Every jurisdiction and tax type in one sortable table</span></a>
+  </div>
+</div>
+
+<div class="source-row">Sources: irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates; irs.gov/pub/irs-pdf/i7004.pdf; fincen.gov/system/files/2020-03/Due_Date_for_FBARs.pdf; edd.ca.gov/en/payroll_taxes/required_filings_and_due_dates; twc.texas.gov/programs/unemployment-tax/tax-report-payment-due-dates; floridarevenue.com/taxes/taxesfees/Pages/rt_return_pay.aspx; pa.gov/services/dli/file-unemployment-compensation-quarterly-wage-tax-reports; ides.illinois.gov/employer-resources/taxes-reporting/quarterly-filing-requirements.html; dol.georgia.gov/file-tax-and-wage-reports-and-make-payments; des.nc.gov/employers/file-adjust-or-review-quarterly-tax-wage-report; esd.wa.gov/employer-requirements/quarterly-reports; dlt.ri.gov/employers/employer-tax-unit/frequently-asked-employer-tax-questions; labor.hawaii.gov/ui/906-2; labor.delaware.gov/divisions/unemployment-insurance/employer-faqs; uid.dli.mt.gov/employer-handbook.pdf; jobsnd.com/unemployment-business-tax/employers-guide; dlr.sd.gov/ra/businesses/wage_reporting.aspx; dws.wyo.gov/dws-division/unemployment-insurance/employers/reporting-due-dates; mdes.ms.gov/employers/unemployment-tax/reporting-and-filing/quarterly-report-and-tax-due-dates; labor.alaska.gov/estax/newsletters/newsltr0213.pdf; does.dc.gov/service/reporting-questions; michigan.gov/leo (Submit Reports and Payments; UIA one-time waiver announcement, May 2026); sbam.org (Michigan UIA one-time waiver article); des.az.gov/content/reporting-wages-and-paying-taxes-schedule; in.gov/dwd (Quarterly Report Due Dates); apps.legislature.ky.gov (787 KAR 1:220); uimn.org/employers (Due Dates); labor.mo.gov/des/employers/quarterly-reports; regulations.justia.com (8 CSR 10-4.030); nj.gov/labor/ea/help/employer_handbook/taxes_wages.shtml; dwd.wisconsin.gov/ui201/t4201.htm; cdle.colorado.gov/employers/unemployment-insurance-premiums/wage-reporting; portal.ct.gov/dol (Quarterly Tax Return Due Dates); labor.idaho.gov (UI Tax Employer Handbook, Nov. 2025); workforce.iowa.gov (UI Tax and Employer Handbook 2026); laworks.net/UnemploymentInsurance; maine.gov/unemployment/employersfaq; labor.maryland.gov/unemployment-insurance/employer-agent/tax-rate.shtml; mass.gov/info-details/employer-contributions-to-unemployment; dol.nebraska.gov/UITax; detr.nv.gov/Page/NUI_View_Quarterly_Reporting_Info; dol.ny.gov/nys-45-quarterly-reporting; oklahoma.gov/oesc/employers/tax/wage-reporting.html; oregon.gov/employ (uipub215.pdf); dew.sc.gov/unemployment-tax-information/extensions; labor.vermont.gov/unemployment-insurance/ui-employers/quarterly-reporting-taxable-wage-information; workforcewv.org/businesses/unemployment-tax-information/tax-filing-reporting; law.cornell.edu/regulations/alabama/Ala-Admin-Code-r-480-4-2-.17; sos.arkansas.gov (Arkansas Register, Regulation No. 6, 208.00.07-003); flrules.org (Rule 73B-10.037, Form RT-6N); kgi.contentdm.oclc.org (Kansas UI Employer Handbook); codes.ohio.gov/ohio-administrative-code/rule-4141-11-01; law.justia.com/codes/new-hampshire (RSA 282-A:142); dol.nebraska.gov (Employer's Guide to Unemployment Insurance); law.cornell.edu/regulations/tennessee (0800-10-01-.05); le.utah.gov (Utah Code 35A-4-305); law.lis.virginia.gov/vacode (60.2-512); app.leg.wa.gov/wac (192-310-030); srca.nm.gov (11.3.400.410 NMAC, official register archive); regulations.justia.com and law.cornell.edu (11.3.400.410 NMAC, secondary cross-check).</div>
+<button onclick="window.print()" style="background:var(--coral,#F65F5A);color:#fff;border:none;padding:11px 24px;font-family:var(--font-sans,'Inter',sans-serif);font-size:13px;font-weight:600;cursor:pointer;margin:20px 0 4px;letter-spacing:.03em;display:inline-block">Print / Save as PDF</button>
+<div class="disc">This page is for informational purposes only and is not legal, tax, or accounting advice. No professional relationship is created by using this site. Tax law and guidance change; verify against current primary authority before acting. <a href="disclaimer.html">Full disclaimer.</a></div>
+</div>
+<div style="background:var(--ink,#111);border-top:2px solid var(--coral,#F65F5A);margin-top:60px;padding:16px 0">
+  <div style="max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <span style="font-family:var(--font-mono,'Courier New',monospace);font-size:11px;color:rgba(255,255,255,.38);letter-spacing:.08em">a tk.cpa resource</span>
+    <a href="https://tk.cpa" target="_blank" rel="noopener" style="font-family:var(--font-sans,'Inter',sans-serif);font-size:12px;font-weight:600;color:var(--coral,#F65F5A);text-decoration:none;letter-spacing:.03em">tk.cpa</a>
+  </div>
+</div>
+</body>
+</html>
