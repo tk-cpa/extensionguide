@@ -1,0 +1,135 @@
+CSS = """:root{--ink:#111111;--ink-80:#343A40;--ink-60:#5E6166;--ink-40:#9BA0A6;--ink-20:#D9DBDE;--ink-10:#EDEEF0;--paper:#FAFAF7;--white:#FFFFFF;--coral:#F65F5A;--coral-600:#E04A45;--coral-100:#FCE3E2;--green:#4A7459;--green-bg:#E2EDE6;--green-b:#9BBDAA;--amber:#8B6535;--amber-bg:#EDE8D8;--amber-b:#C8A878;--blue-acc:#4A6070;--blue-bg:#DDE4E8;--blue-b:#94AFBC;--red:#9B3D3D;--red-bg:#EDE0DC;--red-b:#C8A8A4;--font-display:'Oswald','Arial Narrow',sans-serif;--font-sans:'Inter',-apple-system,sans-serif;--font-mono:'Courier New',monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;padding-bottom:60px}
+a{color:var(--coral);text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:14px 28px!important;border-bottom:1px solid var(--ink-20,#D9DBDE)!important;background:var(--paper,#FAFAF7)!important;position:sticky!important;top:0!important;z-index:100!important}
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--ink,#111111)}
+.wm{font-family:var(--font-display,'Oswald',sans-serif);font-weight:500;font-size:17px;letter-spacing:.05em;text-transform:uppercase;line-height:1.1;color:var(--ink,#111111)}
+.wm small{display:block;font-family:var(--font-sans,'Inter',sans-serif);font-weight:400;font-size:10px;color:var(--coral,#F65F5A);letter-spacing:.1em;margin-top:3px;text-transform:none!important}
+.nav-cta{display:inline-block!important;background:var(--coral,#F65F5A)!important;color:#fff!important;padding:9px 20px!important;font-family:var(--font-sans,'Inter',sans-serif)!important;font-weight:600!important;font-size:13px!important;text-decoration:none!important;letter-spacing:.03em!important;white-space:nowrap!important;flex-shrink:0!important}
+.nav-cta:hover{opacity:.88!important}
+.cat-nav{background:var(--ink,#111111);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-nav-inner{display:flex;min-width:max-content;padding:0 16px}
+.cat-nav a{display:inline-block;padding:10px 14px;font-family:var(--font-sans,'Inter',sans-serif);font-size:11.5px;font-weight:500;color:rgba(255,255,255,.55);text-decoration:none;letter-spacing:.04em;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.cat-nav a:hover,.cat-nav a.active{color:#fff!important;border-bottom-color:var(--coral,#F65F5A);text-decoration:none}
+@media(max-width:480px){nav{padding:12px 16px!important}.nav-cta{padding:8px 14px!important;font-size:12px!important}.cat-nav-inner{padding:0 8px}.cat-nav a{padding:9px 10px;font-size:11px}}
+.ph{background:var(--ink);padding:36px 0 28px;border-bottom:3px solid var(--coral)}
+.phi{max-width:900px;margin:0 auto;padding:0 24px}
+.ph-eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);margin-bottom:12px}
+.ph h1{font-family:var(--font-display);font-weight:500;font-size:clamp(24px,4vw,38px);color:#fff;line-height:1.1;margin-bottom:10px}
+.ph .sub{font-size:13px;color:rgba(255,255,255,.55)}
+.ph .badges{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.badge{font-family:var(--font-mono);font-size:10.5px;padding:3px 9px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12)}
+.back{max-width:900px;margin:0 auto;padding:16px 24px 0}.back a{font-size:12px;color:var(--ink-60);font-weight:500}.back a:hover{color:var(--coral)}
+.article{max-width:900px;margin:0 auto;padding:24px 24px 0}
+.article .lead{font-size:16px;line-height:1.65;color:var(--ink-80);margin-bottom:20px;font-weight:500}
+.article h2{font-family:var(--font-display);font-size:18px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.article h3{font-family:var(--font-sans);font-size:14px;font-weight:700;margin:18px 0 8px;color:var(--ink)}
+.article p{font-size:14px;line-height:1.7;color:var(--ink-80);margin-bottom:12px}
+.article ul,.article ol{margin:0 0 14px 22px}
+.article li{font-size:14px;line-height:1.7;color:var(--ink-80);margin-bottom:6px}
+.slogan{background:var(--ink);color:#fff;padding:18px 20px;margin:22px 0;border-left:4px solid var(--coral)}
+.slogan p{font-size:14px;color:#fff;font-weight:600;margin:0;line-height:1.5}
+.callout{background:var(--ink);color:#fff;padding:16px 20px;margin:20px 0;border-left:4px solid var(--coral)}
+.callout .callout-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--coral);margin-bottom:8px}
+.callout p{font-size:13px;color:rgba(255,255,255,.85);line-height:1.6;margin:0}
+.note-box{background:var(--amber-bg);border-left:3px solid var(--amber);padding:12px 16px;margin:18px 0;font-size:13px;color:var(--amber);line-height:1.6}
+.green-box{background:var(--green-bg);border-left:3px solid var(--green-b);padding:12px 16px;margin:18px 0;font-size:13px;color:var(--green);line-height:1.6}
+.red-box{background:var(--red-bg);border-left:3px solid var(--red-b);padding:12px 16px;margin:18px 0;font-size:13px;color:var(--red);line-height:1.6}
+table.dt{width:100%;border-collapse:collapse;font-size:12.5px;margin:16px 0}
+table.dt th{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:9px 12px;background:var(--ink);color:#fff;text-align:left}
+table.dt td{padding:9px 12px;border-bottom:1px solid var(--ink-20);vertical-align:top;line-height:1.5}
+table.dt tr:last-child td{border-bottom:none}
+.related{margin-top:32px;padding-top:20px;border-top:1px solid var(--ink-20)}
+.related-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-60);margin-bottom:12px}
+.related-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.related-link{display:block;padding:12px 14px;border:1px solid var(--ink-20);background:var(--white);font-size:13px;font-weight:600;color:var(--ink)}
+.related-link span{display:block;font-size:11.5px;font-weight:400;color:var(--ink-60);margin-top:3px}
+.related-link:hover{border-color:var(--coral);text-decoration:none}
+.source-row{font-size:11px;color:var(--ink-60);font-style:italic;line-height:1.6;padding:16px 0 0;border-top:1px solid var(--ink-20);margin-top:24px}
+.disc{font-size:11px;color:var(--ink-40);line-height:1.6;margin-top:14px}
+@media(max-width:700px){.related-links{grid-template-columns:1fr}}
+@media print{button{display:none!important}nav{display:none!important}.cat-nav{display:none!important}}"""
+
+def cat_nav(active):
+    items = [
+        ("index.html", "Home"),
+        ("federal-hub.html", "Federal"),
+        ("states-hub.html", "States"),
+        ("map.html", "Map"),
+        ("master-extension-matrix.html", "Master Matrix"),
+        ("extension-penalties-and-interest.html", "Penalties &amp; Interest"),
+        ("resources.html", "Resources"),
+        ("faq.html", "FAQ"),
+        ("disclaimer.html", "Disclaimer"),
+    ]
+    out = []
+    for href, label in items:
+        cls = ' class="active"' if href == active else ""
+        out.append(f'    <a href="{href}"{cls}>{label}</a>')
+    return "\n".join(out)
+
+FOOTER = """<div style="background:var(--ink,#111);border-top:2px solid var(--coral,#F65F5A);margin-top:60px;padding:16px 0">
+  <div style="max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <span style="font-family:var(--font-mono,'Courier New',monospace);font-size:11px;color:rgba(255,255,255,.38);letter-spacing:.08em">a tk.cpa resource</span>
+    <a href="https://tk.cpa" target="_blank" rel="noopener" style="font-family:var(--font-sans,'Inter',sans-serif);font-size:12px;font-weight:600;color:var(--coral,#F65F5A);text-decoration:none;letter-spacing:.03em">tk.cpa</a>
+  </div>
+</div>"""
+
+def page(filename, title, description, h1, sub, badges, active, body_html, source_row):
+    badges_html = "".join(f'<span class="badge">{b}</span>' for b in badges)
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{description}">
+<link rel="canonical" href="https://extensionguide.com/{filename}">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+{CSS}
+</style>
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="https://extensionguide.com/{filename}">
+<meta property="og:site_name" content="Extension Guide">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"Article","headline":"{h1}","url":"https://extensionguide.com/{filename}","author":{{"@type":"Organization","name":"tk.cpa","url":"https://tk.cpa"}},"publisher":{{"@type":"Organization","name":"Extension Guide","url":"https://extensionguide.com"}},"isAccessibleForFree":true,"inLanguage":"en-US"}}
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="brand">
+    <div class="wm">Extension Guide<small style="text-transform:none!important">a tk.cpa resource</small></div>
+  </a>
+  <a href="https://tk.cpa" target="_blank" rel="noopener" class="nav-cta">tk.cpa</a>
+</nav>
+<div class="cat-nav" role="navigation" aria-label="Sections">
+  <div class="cat-nav-inner">
+{cat_nav(active)}
+  </div>
+</div>
+<div class="ph"><div class="phi">
+  <h1>{h1}</h1>
+  <div class="sub">{sub}</div>
+  <div class="badges">{badges_html}</div>
+</div></div>
+<div class="back"><a href="index.html">&#8592; Extension Guide home</a></div>
+<div class="article">
+
+{body_html}
+
+<div class="source-row">{source_row}</div>
+<button onclick="window.print()" style="background:var(--coral,#F65F5A);color:#fff;border:none;padding:11px 24px;font-family:var(--font-sans,'Inter',sans-serif);font-size:13px;font-weight:600;cursor:pointer;margin:20px 0 4px;letter-spacing:.03em;display:inline-block">Print / Save as PDF</button>
+<div class="disc">This page is for informational purposes only and is not legal, tax, or accounting advice. No professional relationship is created by using this site. Tax law and guidance change; verify against current primary authority before acting. <a href="disclaimer.html">Full disclaimer.</a></div>
+</div>
+{FOOTER}
+</body>
+</html>
+"""
+    with open(f"/home/claude/extensionguide/{filename}", "w", encoding="utf-8") as f:
+        f.write(html)
+    print("wrote", filename)
